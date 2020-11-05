@@ -1,5 +1,6 @@
 import React from 'react'
 import GoogleLogin from 'react-google-login'
+import SuppaNav from '../components/nav.js'
 
 export const AuthPage = () => { 
 
@@ -12,6 +13,7 @@ export const AuthPage = () => {
 
     return (
         <div>
+            <SuppaNav></SuppaNav>
             <h1>AuthPage</h1>
                 <GoogleLogin
                     clientId="272019474369-kophotlk5a37las0qp48o4db5qs8uu1a.apps.googleusercontent.com"

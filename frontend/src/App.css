@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+  #regButton {
+  right: 1rem;
+  position: absolute;
+  bottom: 0px;
+  z-index: 1; }
+  
