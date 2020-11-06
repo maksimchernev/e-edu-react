@@ -3,14 +3,13 @@ const config=require('config')
 const mongoose=require('mongoose')
 
 
-const app = express()
+var app = express()
 
 app.use(express.json({extended: true}))
 
-const PORT=config.get('port') || 5000
-
 app.use('/api/auth', require('./routes/auth'))
 
+const PORT=config.get('port') || 5000
 
 async function start(){
     try {
