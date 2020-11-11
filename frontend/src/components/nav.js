@@ -8,33 +8,6 @@ import { useHttp } from '../hooks/http.hooks';
 
 
 export const  SuppaModal =() => {
-  /*constructor() 
-  {
-    super()
-    this.state={
-      show:false,
-      login:'', 
-      password: ''
-
-    }
-
-    this.onChangeLogin = this.onChangeLogin.bind(this);
-    this.onChangePassword = this.onChangePassword.bind(this);
-
-  }
- 
- 
-
-  onChangeLogin(e) {
-    var val = e.target.value;
-    this.setState({login: val});
-}
-
-onChangePassword(e) {
-  var val = e.target.value;
-  this.setState({password: val});
-}
-*/
 
 const [flag, setFlag] = useState(false)
 const {request} = useHttp()
@@ -65,8 +38,6 @@ const handleLogin = async() =>{
   const handleModal = () =>
   {
       setFlag(!flag)
-
-      console.log(flag)
   }
 
 
