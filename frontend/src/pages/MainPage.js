@@ -1,11 +1,13 @@
 import React from 'react'
-import { SuppaModal } from '../components/nav'
+import { SuppaNav} from '../components/nav'
+import { SuppaModal} from '../components/modal'
 //import SuppaNav from '../components/nav.js'
 
 export const MainPage = () => { 
 
     return (
         <div>
+            <SuppaNav/>
             <SuppaModal/>
         </div>
     )
