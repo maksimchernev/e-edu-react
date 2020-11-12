@@ -48,34 +48,38 @@ const registerHandler = async() =>{
               <Modal.Title><Modal.Header> Регистрация </Modal.Header></Modal.Title>
               <Modal.Body>
                  <h4>Ф.И.О.</h4>
-                    <Row>
-                      <Col>
-                        <div className="form-group" style={{float:'left'}}>
-                            <input type="name" className="form-control" placeholder="Имя" name="firstName" onChange = {changeHandler} />
-                        </div>
-                      </Col>
-                      <Col>
-                        <div className="form-group" style={{float:'left'}}>
-                            <input type="surname" className="form-control" placeholder="Фамилия" name="secondName" onChange = {changeHandler}/>
-                        </div>
-                      </Col>
-                      <Col>
-                        <div className="form-group" style={{float:'left'}}>
-                            <input type="Lastname" className="form-control" placeholder="Отчество(если есть)" name="lastName" onChange = {changeHandler} />
-                        </div>
-                      </Col>
-                    </Row>
+                    <form data-toggle="validator">
+                        <Row>
+                          <Col>
+                            <div className="form-group has-feedback " style={{float:'left'}}>
+                                <input type="name" class="form-control" id="input-name"
+               data-required-error="Поле не заполнено" placeholder="Имя" onChange = {changeHandler} required/>
+                            </div>
+                          </Col>
+                          <Col>
+                            <div className="form-group has-feedback" style={{float:'left'}}>
+                                <input type="surname" className="form-control" data-required-error="Поле не заполнено" placeholder="Фамилия" name="secondName" onChange = {changeHandler} required/>
+                            </div>
+                          </Col>
+                          <Col>
+                            <div className="form-group has-feedback" style={{float:'left'}}>
+                                <input type="Lastname" className="form-control" data-required-error="Поле не заполнено" placeholder="Отчество(если есть)" name="lastName" onChange = {changeHandler} required/>
+                            </div>
+                          </Col>
+                        </Row>
+                    </form>
                     <h4>E-mail and Pass</h4>
                     <Row>
                       <Col>
-                          <Form.Group controlId="formBasicEmail">
-                            <Form.Control type="email" placeholder="Email" name="mail" onChange = {changeHandler}/>
-                          </Form.Group>
+                         <input type="email" class="form-control" id="email"
+               pattern="[_0-9a-z][-_.0-9a-z]*@[0-9a-z][-.0-9a-z]*[0-9a-z]\.[a-z]{2,}"
+               data-pattern-error="Поле должно соответствовать формату somebody@somewhere.com"
+               data-required-error="Поле не заполнено" placeholder="Адрес почты" required/>
+
                       </Col>
                       <Col>
-                        <Form.Group controlId="formBasicPassword">
-                          <Form.Control type="password" placeholder="Password" name="password" onChange = {changeHandler} />
-                        </Form.Group>
+                        <input type="password" class="form-control" id="input-password"
+               data-required-error="Поле не заполнено" placeholder="Password" required/>
                       </Col>
                     </Row>
                     <Row>
