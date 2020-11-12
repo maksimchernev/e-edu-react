@@ -61,7 +61,6 @@ router.post(
 
 router.post(
     '/register',
-    admin,
     async (req,res) => {
     try{
         const errors = validationResult(req)
@@ -72,19 +71,23 @@ router.post(
                 message: "Неправильные данные"
             })
         }
+        
 
-       const {FirstName,SecondName,LastName,Mail,Password} =  req.body 
-       const candidate = await UserCredentials.findOne({Mail})
+       const {firstName,secondName,lastName,mail,password} =  req.body 
+       const candidate = await UserCredentials.findOne({mail})
        
        if (candidate) {
          return  res.status(400). json({message: "Место уже занято другим пользователем"})
        }
 
 
-    const hashedPassword = await bcrypt.hash(Password, 12)
+    const hashedPassword = await bcrypt.hash(password, 12)
 
-       const user = new User({FirstName,SecondName,LastName,Mail,Password: hashedPassword,})
+       const userCredentials = new UserCredentials({firstName,secondName,lastName,mail,password: hashedPassword})
 
+       const user = new User({login:mail,password:hashedPassword})
+
+       await userCredentials.save()
        await user.save()
 
        res.status(201).json({ message: "Пользователь успешно записан"})
