@@ -71,7 +71,7 @@ setForm({...form,[event.target.name]: event.target.value})
             <Modal.Header closeButton> Вход </Modal.Header>
             <Modal.Body>
               <Form>
-                
+
                 <Form.Group controlId="formBasicEmail">
                   <Form.Control type="email" placeholder="Email" name="login" onChange = {changeHandler}/>
                 </Form.Group>
