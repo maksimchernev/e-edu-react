@@ -7,8 +7,6 @@ export const MainPage = () => {
 
     return (
         <div>
-            <SuppaNav/>
-            <SuppaModal/>
         </div>
     )
 }

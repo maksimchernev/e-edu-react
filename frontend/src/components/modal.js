@@ -78,7 +78,7 @@ const responseGoogle=(response)=>{
                   </Nav.Link>
                 </Col>
               </Row>
-              <a href="#">Забыли пароль?</a>
+              <a href="#Forgot-your-password">Забыли пароль?</a>
             </Form>
             </Modal.Body>
           </Modal>
