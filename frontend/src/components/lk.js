@@ -5,6 +5,7 @@ export const  PersonalAcc =() => {
      return(
         <div>
             <h1> Personal Account</h1>
+            <p>fefwfewnfjiwenfiwenfwnefnwefjnfwejfnweifnewifnpwienfiwenfikwenfipwenfnwefipnwefnwefipnwenienp</p>
         </div>
      )
 }

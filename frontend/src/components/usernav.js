@@ -2,18 +2,9 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Navbar, Nav} from 'react-bootstrap';
 import styles from '../App.css';
-import { LoginModal} from './modal'
 
 
-export const  SuppaNav =() => {
-
-const [flag, setFlag] = useState(false)
-
-const handleModal = () =>
-  {
-      setFlag(!flag)
-  }
-
+export const  SuppaUserNav =() => {
       return(
         <div>
           <Navbar bg="light" expand="lg">
@@ -24,11 +15,10 @@ const handleModal = () =>
                 <Nav.Link href="#about-us">О нас</Nav.Link>
                 <Nav.Link href="#list-of-couses">Список курсов</Nav.Link>
                 <Nav.Link href="#partners">Партнеры</Nav.Link>
-                <Button variant="light" onClick={handleModal}>Вход</Button>
+                <Button href="PersonalAccount.js" variant="light">Мой ЛК</Button>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-          <LoginModal show={flag} onHide={handleModal}/>
         </div>
       );
     } 

@@ -7,7 +7,7 @@ import { useHttp } from '../hooks/http.hooks';
 import {AuthContext} from '../context/AuthContext'
 import { useContext } from "react";
 
-export const SuppaModal =(props) => {
+export const LoginModal =(props) => {
     const auth = useContext(AuthContext)
     const {request} = useHttp()
     const [form,setForm] = useState({
