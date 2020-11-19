@@ -9,35 +9,35 @@ import { useHistory } from 'react-router-dom'
 export const  SuppaModal =() => {
 
 
-const {loading,request,error, clearError} = useHttp()
-//const message = useMessage()
-const history = useHistory()
+    const {loading,request,error, clearError} = useHttp()
+    //const message = useMessage()
+    const history = useHistory()
 
 
 
-const [form,setForm] = useState({
-  firstName:'', secondName: '', lastName: '', mail: '', password: ''
-})
+    const [form,setForm] = useState({
+      firstName:'', secondName: '', lastName: '', mail: '', password: ''
+    })
 
-const changeHandler = event => {
-setForm({...form,[event.target.name]: event.target.value})
-}
+    const changeHandler = event => {
+    setForm({...form,[event.target.name]: event.target.value})
+    }
 
-const subcribe = event => {
+    const subcribe = event => {
 
-}
+    }
 
-const registerHandler = async() =>{
-  try{
+    const registerHandler = async() =>{
+      try{
 
-      const data = await request('api/auth/register', 'POST', {...form}, /*{ 
-        Authorization: `Bearer ${auth.token}`}*/)
-       //message(data.message)
+          const data = await request('api/auth/register', 'POST', {...form}, /*{
+            Authorization: `Bearer ${auth.token}`}*/)
+           //message(data.message)
 
-      history.push('/')
-  } catch(e) {
+          history.push('/')
+      } catch(e) {
 
-  }
+      }
 } 
 
       return(

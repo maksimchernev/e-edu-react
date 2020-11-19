@@ -4,33 +4,30 @@ import {Button, Nav, Modal, Form, Row, Col} from 'react-bootstrap';
 import styles from '../App.css';
 import GoogleLogin from 'react-google-login';
 import { useHttp } from '../hooks/http.hooks';
-
+import {AuthContext} from '../context/AuthContext'
+import { useContext } from "react";
 
 export const SuppaModal =(props) => {
-
-const {request} = useHttp()
-const [form,setForm] = useState({
-  login:'', password: '' 
+    const auth = useContext(AuthContext)
+    const {request} = useHttp()
+    const [form,setForm] = useState({
+      login:'', password: ''
   
 })
 
 const handleLogin = async() =>{
     try{
-        console.log({...form})
+        //console.log({...form})
         const user = await request('api/auth/login', 'POST', {...form})
-
-        const temp = user.token
-
-        //const data = await request('api/data/verify','POST', {temp} )
-
-       // auth.login(user.token, user.userId, data.user)
+        auth.login(user.token, user.userId)
     } catch(e) {
 
     }
-} 
+}
+
 
 const changeHandler = event => {
-setForm({...form,[event.target.name]: event.target.value})
+    setForm({...form,[event.target.name]: event.target.value})
 }
   
 const responseGoogle=(response)=>{
@@ -58,7 +55,7 @@ const responseGoogle=(response)=>{
                 </Form.Group>
               <Row>
                 <Col>
-                  <Button variant="dark" id="enterButton" onClick={()=>{handleLogin()}}>
+                  <Button variant="dark" id="enterButton" onClick={handleLogin}>
                   Войти
                   </Button>
 
