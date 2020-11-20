@@ -45,7 +45,8 @@ if (isAuthenticated==!!token) {
 return (
     <AuthContext.Provider value={{token, login, logout, userId, isAuthenticated}}>
         <Router>
-          {navigation}
+        {!isAuthenticated && <SuppaNav/>}
+        {isAuthenticated && <SuppaUserNav/>}
           <div className="container">
           {routes}
           </div>
