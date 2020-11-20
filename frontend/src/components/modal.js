@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Nav, Modal, Form, Row, Col} from 'react-bootstrap';
-import styles from '../App.css';
 import GoogleLogin from 'react-google-login';
 import { useHttp } from '../hooks/http.hooks';
-import {AuthContext} from '../context/AuthContext'
 import { useContext } from "react";
+import { AuthContext } from '../context/AuthContext';
+import { useMessage } from '../hooks/message.hooks';
 
 export const SuppaModal =(props) => {
     const auth = useContext(AuthContext)
+    const message = useMessage()
     const {request} = useHttp()
     const [form,setForm] = useState({
       login:'', password: ''
@@ -17,8 +18,8 @@ export const SuppaModal =(props) => {
 
 const handleLogin = async() =>{
     try{
-        //console.log({...form})
         const user = await request('api/auth/login', 'POST', {...form})
+        message(user.message)
         auth.login(user.token, user.userId)
     } catch(e) {
 
@@ -31,10 +32,10 @@ const changeHandler = event => {
 }
   
 const responseGoogle=(response)=>{
-    console.log(response);
-    console.log(response.profileObj);
+  auth.login(response.tokenId, response.profileObj.googleId)
   }
 
+  
       return(
         <div>
           <Modal {...props}>
@@ -60,8 +61,9 @@ const responseGoogle=(response)=>{
                   </Button>
 
                   <GoogleLogin
-                    clientId="272019474369-kophotlk5a37las0qp48o4db5qs8uu1a.apps.googleusercontent.com"
+                    clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}  //"272019474369-kophotlk5a37las0qp48o4db5qs8uu1a.apps.googleusercontent.com"
                     buttonText="Войти"
+
                     onSuccess={responseGoogle}
                     onFailure={responseGoogle}
                     cookiePolicy={'single_host_origin'}

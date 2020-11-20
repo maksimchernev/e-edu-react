@@ -1,15 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useRoutes} from './routes/routes'
 import {BrowserRouter as Router} from 'react-router-dom'
 import { SuppaNav} from './components/nav'
 import {useAuth} from './hooks/auth.hook'
-import {AuthContext} from './context/AuthContext'
+import {AuthContext} from './context/AuthContext.js'
 
 function App() {
-const {token, login, logout, userId} = useAuth
+
+  
+const {token, login, logout, userId} = useAuth()
 const isAuthenticated = !!token
 const routes = useRoutes(isAuthenticated)
 
+useEffect(() => {
+
+  const _onInit = auth2 => {
+    console.log('init OK', auth2)
+  }
+  const _onError = err => {
+    console.log('error', err)
+  }
+
+    
+    window.gapi.load('auth2', function() {
+    window.gapi.auth2
+      .init({
+        client_id:
+          process.env.REACT_APP_GOOGLE_CLIENT_ID,
+      })
+      .then(_onInit, _onError)
+  })
+}, []);
 
 return (
     <AuthContext.Provider value={{token, login, logout, userId, isAuthenticated}}>

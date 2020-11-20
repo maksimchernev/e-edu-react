@@ -48,7 +48,7 @@ router.post(
             const token = jwt.sign(
                 { user: 'admin' },
                 config.get('jwtSecret'),
-                {   expiresIn: '3h' }
+                {   expiresIn: '1h' }
 
             )
             res.json({token, userId: user.id,})
