@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { AuthContext } from '../context/AuthContext';
 import { useMessage } from '../hooks/message.hooks';
 
-export const SuppaModal =(props) => {
+export const LoginModal =(props) => {
     const auth = useContext(AuthContext)
     const message = useMessage()
     const {request} = useHttp()
