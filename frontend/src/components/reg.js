@@ -6,7 +6,7 @@ import { useHttp } from '../hooks/http.hooks';
 import { useHistory } from 'react-router-dom'
 
 
-export const  SuppaModal =() => {
+export const  Reg =() => {
 
 
     const {loading,request,error, clearError} = useHttp()

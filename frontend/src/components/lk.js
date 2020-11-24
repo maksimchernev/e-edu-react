@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export const  PersonalAcc =() => {
+export const  Lk =() => {
      return(
         <div>
             <h1> Personal Account</h1>

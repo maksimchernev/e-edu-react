@@ -1,11 +1,11 @@
 import React from 'react'
-import { SuppaModal } from '../components/reg'
+import { Reg } from '../components/reg'
 
 export const RegisterPage = () => { 
 
     return (
         <div>
-          <SuppaModal/>
+          <Reg/>
         </div>
     )
 }

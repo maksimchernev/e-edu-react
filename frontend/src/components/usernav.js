@@ -4,7 +4,7 @@ import {Button, Navbar, Nav} from 'react-bootstrap';
 import styles from '../App.css';
 
 
-export const  SuppaUserNav =() => {
+export const  Usernav =() => {
       return(
         <div>
           <Navbar bg="light" expand="lg">

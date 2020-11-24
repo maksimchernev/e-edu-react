@@ -5,7 +5,7 @@ import styles from '../App.css';
 import { LoginModal} from './modal'
 
 
-export const  SuppaNav =() => {
+export const  Nav_ =() => {
 
 const [flag, setFlag] = useState(false)
 

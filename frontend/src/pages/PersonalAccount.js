@@ -1,11 +1,11 @@
 import React from 'react'
-import { PersonalAcc } from '../components/lk'
+import { Lk } from '../components/lk'
 
 export const PersonalAccount = () => {
 
     return (
         <div>
-          <PersonalAcc/>
+          <Lk/>
         </div>
     )
 }
