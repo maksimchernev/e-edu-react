@@ -6,6 +6,7 @@ const {check, validationResult} = require('express-validator')
 const jwt = require('jsonwebtoken')
 const config = require('config')
 const bcrypt = require('bcryptjs')
+const mongoose = require('mongoose');
 
 
 router.post(
@@ -46,7 +47,7 @@ router.post(
             }
 
             const token = jwt.sign(
-                { user: 'admin' },
+                {userId:user.id},
                 config.get('jwtSecret'),
                 {   expiresIn: '1h' }
 
@@ -63,7 +64,7 @@ router.post(
     '/register',
     async (req,res) => {
     try{
-        const errors = validationResult(req)
+       /* const errors = validationResult(req)
 
         if(!errors.isEmpty()){
             return res.status(400).json({
@@ -71,9 +72,10 @@ router.post(
                 message: "Неправильные данные"
             })
         }
-        
+        */
 
        const {firstName,secondName,lastName,mail,password} =  req.body 
+       console.log(req.body)
        const candidate = await UserCredentials.findOne({mail})
        
        if (candidate) {
@@ -83,9 +85,9 @@ router.post(
 
     const hashedPassword = await bcrypt.hash(password, 12)
 
-       const userCredentials = new UserCredentials({firstName,secondName,lastName,mail,password: hashedPassword})
+       const userCredentials = new UserCredentials({_id: new mongoose.Types.ObjectId().toHexString(), firstName,secondName,lastName,mail,password: hashedPassword})
 
-       const user = new User({login:mail,password:hashedPassword})
+       const user = new User({_id:userCredentials.id,login:mail,password:hashedPassword})
 
        await userCredentials.save()
        await user.save()

@@ -13,7 +13,7 @@ const {token, login, logout, userId} = useAuth()
 const isAuthenticated = !!token
 const routes = useRoutes(isAuthenticated)
 
-useEffect(() => {
+/*useEffect(() => {
 
   const _onInit = auth2 => {
     console.log('init OK', auth2)
@@ -32,7 +32,7 @@ useEffect(() => {
       .then(_onInit, _onError)
   })
 }, []);
-
+*/
 
 let navigation;
 if (isAuthenticated==!!token) {

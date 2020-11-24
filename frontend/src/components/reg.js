@@ -53,7 +53,7 @@ export const  Reg =() => {
                           <Col>
                             <div className="form-group has-feedback " style={{float:'left'}}>
                                 <input type="name" class="form-control" id="input-name"
-               data-required-error="Поле не заполнено" placeholder="Имя" onChange = {changeHandler} required/>
+               data-required-error="Поле не заполнено" placeholder="Имя" name="firstName" onChange = {changeHandler} required/>
                             </div>
                           </Col>
                           <Col>
@@ -71,15 +71,15 @@ export const  Reg =() => {
                     <h4>E-mail and Pass</h4>
                     <Row>
                       <Col>
-                         <input type="email" class="form-control" id="email"
+                         <input type="email" className="form-control" id="email"
                pattern="[_0-9a-z][-_.0-9a-z]*@[0-9a-z][-.0-9a-z]*[0-9a-z]\.[a-z]{2,}"
                data-pattern-error="Поле должно соответствовать формату somebody@somewhere.com"
-               data-required-error="Поле не заполнено" placeholder="Адрес почты" required/>
+               data-required-error="Поле не заполнено" placeholder="Адрес почты" name="mail" onChange = {changeHandler} required/>
 
                       </Col>
                       <Col>
-                        <input type="password" class="form-control" id="input-password"
-               data-required-error="Поле не заполнено" placeholder="Password" required/>
+                        <input type="password" className="form-control" id="input-password"
+               data-required-error="Поле не заполнено" placeholder="Password" name="password" onChange = {changeHandler} required/>
                       </Col>
                     </Row>
                     <Row>
