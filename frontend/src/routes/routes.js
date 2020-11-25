@@ -3,6 +3,9 @@ import {Switch,Route,Redirect} from 'react-router-dom'
 import { MainPage } from '../pages/MainPage'
 import { RegisterPage } from '../pages/RegisterPage'
 import { PersonalAccount } from '../pages/PersonalAccount'
+import {About} from '../pages/About'
+import {ListCourses} from '../pages/Courses'
+import {OurPartners} from '../pages/PartnersPage'
 
 export const useRoutes = isAuthenticated => {
     if (isAuthenticated){
@@ -11,6 +14,16 @@ export const useRoutes = isAuthenticated => {
                 <Route path ="/personalAccount" exact>
                     <PersonalAccount />
                 </Route>
+                <Route path ="/aboutUs" exact>
+                    <About/>
+                </Route>
+                <Route path ="/listOfCourses" exact>
+                    <ListCourses/>
+                </Route>
+                <Route path ="/partners" exact>
+                    <OurPartners/>
+                </Route>
+
                 <Redirect to="/personalAccount" />
             </Switch>
         )
@@ -25,7 +38,18 @@ export const useRoutes = isAuthenticated => {
                 <RegisterPage/>
             </Route>
 
-        </Switch>
+            <Route path ="/aboutUs" exact>
+                <About/>
+            </Route>
+
+            <Route path ="/listOfCourses" exact>
+                <ListCourses/>
+            </Route>
+            <Route path ="/partners" exact>
+                <OurPartners/>
+            </Route>
+
+         </Switch>
     )
 
 }
