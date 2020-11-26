@@ -1,11 +1,11 @@
 import React from 'react'
-import { AboutUs } from '../components/aboutus'
+
 
 export const About = () => {
 
     return (
-        <div>
-          <AboutUs/>
-        </div>
+          <div>
+              <h1>About us</h1>
+          </div>
     )
 }

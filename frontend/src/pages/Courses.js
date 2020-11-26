@@ -1,10 +1,9 @@
 import React from 'react'
-import { Listofcourses } from '../components/listofcourses'
 
 export const ListCourses = () => {
     return (
-        <div>
-          <Listofcourses/>
-        </div>
+          <div>
+            <h1>List of courses</h1>
+          </div>
     )
 }
