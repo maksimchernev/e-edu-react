@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button, Navbar, Nav} from 'react-bootstrap';
+import {Button, Navbar, Nav, Dropdown} from 'react-bootstrap';
 import styles from '../App.css';
 
 
@@ -15,7 +15,16 @@ export const  Usernav =() => {
                 <Nav.Link href="/aboutUs">О нас</Nav.Link>
                 <Nav.Link href="/listOfCourses">Список курсов</Nav.Link>
                 <Nav.Link href="/partners">Партнеры</Nav.Link>
-                <Button href="/personalAccount" variant="light">Мой ЛК</Button>
+                <Dropdown>
+                  <Dropdown.Toggle variant="light" id="dropdown-basic">
+                    Имя
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="/myCourses">Мои курсы</Dropdown.Item>
+                    <Dropdown.Item href="/settings">Настройки</Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">Выход</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
               </Nav>
             </Navbar.Collapse>
           </Navbar>

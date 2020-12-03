@@ -6,7 +6,8 @@ import { PersonalAccount } from '../pages/PersonalAccount'
 import {About} from '../pages/About'
 import {ListCourses} from '../pages/Courses'
 import {OurPartners} from '../pages/PartnersPage'
-
+import {MyCourses} from '../pages/MyCourses'
+import {Settings} from  '../pages/Settings'
 export const useRoutes = isAuthenticated => {
     if (isAuthenticated){
         return (
@@ -22,6 +23,12 @@ export const useRoutes = isAuthenticated => {
                 </Route>
                 <Route path ="/partners" exact>
                     <OurPartners/>
+                </Route>
+                <Route path ="/myCourses" exact>
+                    <MyCourses/>
+                </Route>
+                <Route path ="/settings" exact>
+                    <Settings/>
                 </Route>
 
                 <Redirect to="/personalAccount" />
