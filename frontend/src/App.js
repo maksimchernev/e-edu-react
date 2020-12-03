@@ -3,6 +3,7 @@ import {useRoutes} from './routes/routes'
 import {BrowserRouter as Router} from 'react-router-dom'
 import  {Nav_}  from './components/nav'
 import  {Usernav} from './components/usernav'
+import  {Footer} from './components/footer'
 import {useAuth} from './hooks/auth.hook'
 import {AuthContext} from './context/AuthContext.js'
 

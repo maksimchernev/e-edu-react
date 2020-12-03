@@ -37,7 +37,7 @@
   }
 }
 
-  #regButton {
+#regButton {
   right: 1rem;
   position: absolute;
   bottom: 0px;
@@ -46,4 +46,17 @@
 #email{
 size:10px;
 }
-  
+
+.p-slider {
+  color: black;
+}
+
+.footer-color {
+  background-color: black;
+}
+.tab_content {
+  border: #cccccc;
+  border-style: solid;
+  padding: 10px;
+  border-width: 1px;
+}
