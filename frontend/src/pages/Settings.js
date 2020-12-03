@@ -35,6 +35,21 @@ export const Settings = () => {
                                 <h5>Отчество</h5>
                                 <input type="Lastname" className="form-control" data-required-error="Поле не заполнено" placeholder="Отчество(если есть)" name="lastName"/>
                                 <button>Сохранить изменения</button>
+                             </div>
+                             <div className="col" >
+                                <p>Photo</p>
+                             </div>
+                             <div className="col">
+                               <div className="row">
+                                    <button>Удалить фотографию</button>
+                               </div>
+                               <div className="row">
+                                  <button>Обновить фотографию</button>
+                               </div>
+                             </div>
+
+                         </div>
+                         <div className="row">
                                 <h3>Сменить пароль</h3>
                                 <div className="row">
                                     <div className="col">
@@ -51,8 +66,8 @@ export const Settings = () => {
                                     </div>
                                     <button>Сохранить изменения</button>
                                 </div>
-                             </div>
                          </div>
+
                     </div>
 
                 </div>
