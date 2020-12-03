@@ -7,14 +7,14 @@ export const Settings = () => {
         <div className="row">
             <div className="col-sm-30">
                 <h1>Настройки</h1>
-                <ul class="nav nav-tabs nav-stacked flex-column" id="tab-example" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="first-tab" data-toggle="tab"
+                <ul className="nav nav-tabs nav-stacked flex-column" id="tab-example" role="tablist">
+                    <li clasNames="nav-item">
+                        <a className="nav-link active" id="first-tab" data-toggle="tab"
                            href="#first-tab-content" role="tab" aria-controls="first-tab-content"
                            aria-selected="true">Аккаунт</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="second-tab" data-toggle="tab"
+                    <li className="nav-item">
+                        <a className="nav-link" id="second-tab" data-toggle="tab"
                            href="#second-tab-content" role="tab" aria-controls="second-tab-content"
                            aria-selected="false">Уведомления</a>
                     </li>
@@ -22,8 +22,8 @@ export const Settings = () => {
             </div>
 
             <div className="col-sm-5">
-                <div class="tab-content" id="tab-content-example">
-                    <div class="tab-pane fade show active" id="first-tab-content" role="tabpanel"
+                <div className="tab-content" id="tab-content-example">
+                    <div className="tab-pane fade show active" id="first-tab-content" role="tabpanel"
                          aria-labelledby="first-tab">
                          <div className="row">
                              <div className="col">
