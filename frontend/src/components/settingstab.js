@@ -2,9 +2,16 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Tab, Row, Col, Nav, Form, Button} from 'react-bootstrap';
 
-export const SettingsTab = () => {
+export const SettingsTab = (  {user} ) => {
+
+
+	const firstName = user[Object.keys(user)[1]]
+    const secondName = user[Object.keys(user)[2]]
+    const lastName = user[Object.keys(user)[3]]
+    const mail = user[Object.keys(user)[4]]
+
     return (
-    <div class="container">
+    <div className="container">
     	<h1>Настройки</h1>
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           	<Row>
@@ -21,23 +28,23 @@ export const SettingsTab = () => {
 	            <Col sm={9}>
 	              	<Tab.Content>
 		                <Tab.Pane eventKey="first">
-		                	<div class="tab_content">
+		                	<div className="tab_content">
 			                	<h3>Основная информация</h3>
 			                	<form data-toggle="validator">
 		                        	<Row>
 			                          	<Col>
 				                            <div className="form-group has-feedback ">
 				                            	<h5>Фамилия</h5>
-				                                <input type="surname" className="form-control" data-required-error="Поле не заполнено" placeholder="Фамилия" name="secondName" required/>
+				                                <input type="surname" className="form-control" data-required-error="Поле не заполнено" placeholder={secondName} name="secondName" required/>
 				                            	<h5>Имя</h5>
-				                                <input type="name" class="form-control" id="input-name" data-required-error="Поле не заполнено" placeholder="Имя" name="firstName" required/>
+				                                <input type="name" className="form-control" id="input-name" data-required-error="Поле не заполнено" placeholder={firstName} name="firstName" required/>
 				                                <h5>Отчество</h5>
-					                            <input type="Lastname" className="form-control" data-required-error="Поле не заполнено" placeholder="Отчество(если есть)" name="lastName"/>
+					                            <input type="lastname" className="form-control" data-required-error="Поле не заполнено" placeholder={lastName} name="lastName"/>
 				                                <h5>EMAIL</h5>
 				                                <input type="email" className="form-control" id="email"
 									               pattern="[_0-9a-z][-_.0-9a-z]*@[0-9a-z][-.0-9a-z]*[0-9a-z]\.[a-z]{2,}"
 									               data-pattern-error="Поле должно соответствовать формату somebody@somewhere.com"
-									               data-required-error="Поле не заполнено" placeholder="Адрес почты" name="mail" required/>
+									               data-required-error="Поле не заполнено" placeholder={mail} name="mail" required/>
 				                            </div>
 			                          	</Col>
 			                          	<Col>
@@ -80,7 +87,7 @@ export const SettingsTab = () => {
 							</div>
 		                </Tab.Pane>
 		                <Tab.Pane eventKey="second">
-		                	<div class="tab_content">
+		                	<div className="tab_content">
 			                	<h3>Настройка уведомлений</h3>
 			                	<Form>
 								  <Form.Group controlId="formBasicCheckbox">

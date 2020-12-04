@@ -32,7 +32,7 @@ useEffect(() => {
   if( ! rendered ) {
       setRendered(true);
   }
-}, [getUser]);
+}, [getUser,rendered]);
 
 
     return (

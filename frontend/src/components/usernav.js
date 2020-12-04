@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button, Navbar, Nav, Dropdown} from 'react-bootstrap';
-import styles from '../App.css';
+import { Navbar, Nav, Dropdown} from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 
 
 export const  Usernav =() => {
+
+  const auth = useContext(AuthContext)
+  const history = useHistory()
+
+  const logoutHandler = event => { 
+    event.preventDefault()
+    auth.logout()
+    history.push('/')
+}
+
       return(
         <div>
           <Navbar bg="light" expand="lg">
@@ -22,7 +33,7 @@ export const  Usernav =() => {
                   <Dropdown.Menu>
                     <Dropdown.Item href="/myCourses">Мои курсы</Dropdown.Item>
                     <Dropdown.Item href="/settings">Настройки</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Выход</Dropdown.Item>
+                    <Dropdown.Item onClick={logoutHandler}>Выход</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               </Nav>

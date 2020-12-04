@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Modal, Form, Row, Col} from 'react-bootstrap';
 import { useHttp } from '../hooks/http.hooks';
@@ -9,8 +9,7 @@ import { useHistory } from 'react-router-dom'
 export const  Reg =() => {
 
 
-    const {loading,request,error, clearError} = useHttp()
-    //const message = useMessage()
+    const {request,} = useHttp()
     const history = useHistory()
 
 
