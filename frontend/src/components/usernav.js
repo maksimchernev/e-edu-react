@@ -30,7 +30,7 @@ export const  Usernav =() => {
                   <Dropdown.Toggle variant="light" id="dropdown-basic">
                     Имя
                   </Dropdown.Toggle>
-                  <Dropdown.Menu>
+                  <Dropdown.Menu id="dropdown-menu-right" style={{right: 0, left:"auto"}}>
                     <Dropdown.Item href="/myCourses">Мои курсы</Dropdown.Item>
                     <Dropdown.Item href="/settings">Настройки</Dropdown.Item>
                     <Dropdown.Item onClick={logoutHandler}>Выход</Dropdown.Item>
