@@ -37,7 +37,7 @@ export const useRoutes = isAuthenticated => {
     }
     return(
         <Switch>
-            <Route path ="/loginPage" exact>
+            <Route path ="/mainPage" exact>
                 <MainPage />
             </Route>
 
@@ -56,6 +56,7 @@ export const useRoutes = isAuthenticated => {
                 <OurPartners/>
             </Route>
 
+            <Redirect to="/mainPage" />
          </Switch>
     )
 

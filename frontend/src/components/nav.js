@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Navbar, Nav} from 'react-bootstrap';
 import styles from '../App.css';
 import { LoginModal} from './modal'
-
+import logo from'./logo.jpg'
 export const  Nav_ =() => {
 
 const [flag, setFlag] = useState(false)
@@ -15,8 +15,10 @@ const handleModal = () =>
 
       return(
         <div>
-          <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="/loginPage">Suppa Aggregator</Navbar.Brand>
+          <Navbar expand="lg">
+            <Navbar.Brand href="/loginPage">
+                <img className="logo"  src={logo} />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ml-auto">

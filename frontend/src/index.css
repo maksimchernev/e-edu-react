@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar, .navbar-default{
+ background: #003399;
+}
+
+.carousel-item img{
+    width: 1390px;
+    height: 420px;
+    left: 26px;
+    top: 24px;
+}
+
+.logo{
+    width: 50%;
+    height: 50%;
+}
