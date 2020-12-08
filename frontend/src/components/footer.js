@@ -4,9 +4,9 @@ import {Button, Card, CardDeck, Carousel, Modal, Form, Row, Col} from 'react-boo
 
 export const Footer =() => {
 	return(
-		<div class="navbar-fixed-bottom row-fluid footer-color">
-      		<div class="navbar-inner">
-          		<div class="container">
+		<div className="navbar-fixed-bottom footer-color">
+      		<div className="navbar-inner">
+          		<div className="container">
           			<p>this is the footer</p>
           		</div>
           	</div>

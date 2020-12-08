@@ -19,7 +19,7 @@ export const  Usernav =() => {
       return(
         <div>
           <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="mainpage.js">Suppa Aggregator</Navbar.Brand>
+            <Navbar.Brand href="/mainPage">Suppa Aggregator</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ml-auto">

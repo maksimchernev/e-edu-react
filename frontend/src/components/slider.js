@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Carousel, Modal, Form, Row, Col} from 'react-bootstrap';
+import im from './12.jpg'
+import im1 from './13.jpg'
 
 export const Slider =() => {
+
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
       return(
         <div>
-          	<Carousel>
+          	<Carousel activeIndex={index} onSelect={handleSelect}>
 	  			<Carousel.Item>
 				    <img
 				      className="d-block w-100"
-				      src=""
+				      src={im}
 				      alt="First slide"
 				    />
 	    			<Carousel.Caption className="p-slider">
@@ -20,8 +29,8 @@ export const Slider =() => {
 				<Carousel.Item>
 				    <img
 				      className="d-block w-100"
-				      src=""
-				      alt="Third slide"
+				      src={im1}
+				      alt="Second slide"
 				    />
 				    <Carousel.Caption className="p-slider">
 				      <h3>Second slide label</h3>

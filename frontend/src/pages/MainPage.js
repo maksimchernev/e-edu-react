@@ -1,7 +1,7 @@
 import React from 'react'
 import  {Slider}  from '../components/slider'
 import  {CourseCard}  from '../components/coursecard'
-
+import  {Footer}  from '../components/footer'
 
 export const MainPage = () => { 
 
@@ -10,6 +10,7 @@ export const MainPage = () => {
             <Slider />
                 <h1>Популярные курсы</h1>
             <CourseCard />
+            <Footer />
         </div>    
     );
 }
