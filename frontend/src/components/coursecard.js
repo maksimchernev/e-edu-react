@@ -6,7 +6,6 @@ export const CourseCard =() => {
       return(
         <div>
           <CardDeck>
-<<<<<<< HEAD
             <Row>
 					 <FlippingCard className="card" style={{border: "2px solid #003399"}}>
                         <FlippingCardBack>
@@ -60,6 +59,7 @@ export const CourseCard =() => {
                       </FlippingCard>
             </Row>
           </CardDeck>
+          <CardDeck>
           <Row>
 					  <Card style={{border: "2px solid #003399", width: "422.94px", height: "482.15px"}}>
 					    <Card.Img variant="top" src="holder.js/100px160" />
@@ -129,7 +129,6 @@ export const CourseCard =() => {
 					  </Card>
           </Row>
 					</CardDeck>
->>>>>>> ba3fb6d0b277310649794486af701b691f522d57
         </div>
       );
     } 

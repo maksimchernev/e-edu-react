@@ -3,6 +3,9 @@ import { Lk } from '../components/lk'
 import { AuthContext } from '../context/AuthContext'
 import { useHttp } from '../hooks/http.hooks'
 import { useMessage } from '../hooks/message.hooks'
+import  {Slider}  from '../components/slider'
+import  {CourseCard}  from '../components/coursecard'
+import  {Footer}  from '../components/footer'
 
 export const PersonalAccount = () => {
 
@@ -37,7 +40,9 @@ useEffect(() => {
 
     return (
         <div>
-          <Lk/>
+            <h1>Мои курсы</h1>
+            <CourseCard />
+            <Footer />
         </div>
     )
 }

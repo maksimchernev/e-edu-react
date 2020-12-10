@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Dropdown} from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import logo from'./logo.jpg'
 import { AuthContext } from '../context/AuthContext';
 
 
@@ -18,8 +19,10 @@ export const  Usernav =() => {
 
       return(
         <div>
-          <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="/mainPage">Suppa Aggregator</Navbar.Brand>
+          <Navbar expand="lg">
+            <Navbar.Brand href="/loginPage">
+                <img className="logo"  src={logo} />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ml-auto">

@@ -35,6 +35,7 @@ useEffect(() => {
 
     return (
         <div>
+            <h1>Настройки</h1>
           { !loading && user && <SettingsTab user= {user} />}
         </div>
     )
