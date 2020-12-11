@@ -20,7 +20,7 @@ export const  Usernav =() => {
       return(
         <div>
           <Navbar expand="lg">
-            <Navbar.Brand href="/loginPage">
+            <Navbar.Brand href="/mainPage">
                 <img className="logo"  src={logo} />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

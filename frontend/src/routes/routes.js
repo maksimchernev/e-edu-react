@@ -12,26 +12,36 @@ export const useRoutes = isAuthenticated => {
     if (isAuthenticated){
         return (
             <Switch>
+
+                 <Route path ="/mainPage" exact>
+                <MainPage />
+                </Route>
+
                 <Route path ="/personalAccount" exact>
                     <PersonalAccount />
                 </Route>
+                
                 <Route path ="/aboutUs" exact>
                     <About/>
                 </Route>
+
                 <Route path ="/listOfCourses" exact>
                     <ListCourses/>
                 </Route>
+
                 <Route path ="/partners" exact>
                     <OurPartners/>
                 </Route>
+
                 <Route path ="/myCourses" exact>
                     <MyCourses/>
                 </Route>
+                
                 <Route path ="/settings" exact>
                     <Settings/>
                 </Route>
 
-                <Redirect to="/personalAccount" />
+            
             </Switch>
         )
     }
@@ -56,7 +66,7 @@ export const useRoutes = isAuthenticated => {
                 <OurPartners/>
             </Route>
 
-            <Redirect to="/mainPage" />
+        
          </Switch>
     )
 

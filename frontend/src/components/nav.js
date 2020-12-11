@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Navbar, Nav} from 'react-bootstrap';
-import styles from '../App.css';
 import { LoginModal} from './modal'
 import logo from'./logo.jpg'
 export const  Nav_ =() => {
@@ -16,7 +15,7 @@ const handleModal = () =>
       return(
         <div>
           <Navbar expand="lg">
-            <Navbar.Brand href="/loginPage">
+            <Navbar.Brand href="/mainPage">
                 <img className="logo"  src={logo} />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
