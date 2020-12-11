@@ -60,15 +60,6 @@ const responseGoogle=(response)=>{
                   Войти
                   </Button>
 
-                  <GoogleLogin
-                    clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}  //"272019474369-kophotlk5a37las0qp48o4db5qs8uu1a.apps.googleusercontent.com"
-                    buttonText="Войти"
-
-                    onSuccess={responseGoogle}
-                    onFailure={responseGoogle}
-                    cookiePolicy={'single_host_origin'}
-                />
-
                 </Col>
                 <Col className="ml-auto">
                   <Nav.Link href="/RegisterPage"><Button variant="primary" className="ml-auto" id="regButton">
