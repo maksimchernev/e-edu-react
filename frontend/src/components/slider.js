@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button, Carousel, Modal, Form, Row, Col} from 'react-bootstrap';
-import im from './12.jpg'
-import im1 from './13.jpg'
+import { Carousel} from 'react-bootstrap';
+import im from '../images/12.jpg'
+import im1 from '../images/13.jpg'
 
 export const Slider =() => {
 

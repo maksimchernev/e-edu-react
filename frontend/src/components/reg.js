@@ -29,9 +29,7 @@ export const  Reg =() => {
     const registerHandler = async() =>{
       try{
 
-          const data = await request('api/auth/register', 'POST', {...form}, /*{
-            Authorization: `Bearer ${auth.token}`}*/)
-           //message(data.message)
+          await request('api/auth/register', 'POST', {...form},)
 
           history.push('/')
       } catch(e) {

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Nav, Modal, Form, Row, Col} from 'react-bootstrap';
-import GoogleLogin from 'react-google-login';
 import { useHttp } from '../hooks/http.hooks';
 import { useContext } from "react";
 import { AuthContext } from '../context/AuthContext';
@@ -31,9 +30,6 @@ const changeHandler = event => {
     setForm({...form,[event.target.name]: event.target.value})
 }
   
-const responseGoogle=(response)=>{
-  auth.login(response.tokenId, response.profileObj.googleId)
-  }
 
   
       return(
