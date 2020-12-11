@@ -14,14 +14,6 @@ const isAuthenticated = !!token
 const routes = useRoutes(isAuthenticated)
 
 
-let navigation;
-if (isAuthenticated===!!token) {
-    navigation = <Nav_ />
-  }
-  else {
-    navigation = <Usernav />
-  }
-
 return (
     <AuthContext.Provider value={{token, login, logout, userId, isAuthenticated}}>
         <Router>
