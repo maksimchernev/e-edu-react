@@ -2,10 +2,10 @@ const {Router} = require ('express')
 const UserCredentials = require('../schemes/UserCredentials')
 const router = Router()
 const auth = require('../middleware/auth.middleware')
+const Courses = require('../schemes/Course')
 
 router.get(`/getData/:id`,auth, async (req,res)=>{
     try {
-        console.log(req.params)
         if (req.user.userId == req.params.id)
         {
             const user = await UserCredentials.findById(req.params.id) 
@@ -20,6 +20,18 @@ router.get(`/getData/:id`,auth, async (req,res)=>{
         {
                 res.status(400).json ({message: 'Ошибка, нет прав доступа'})
         }
+
+    } catch(e){
+        res.status(500).json({message: 'Ошибка, попытайтесь снова'}) 
+    }
+})
+
+router.get('/getСourses',auth, async (req,res)=>{
+    try {
+        const collection = await Courses.find(req.body)
+
+        res.json(collection)
+
 
     } catch(e){
         res.status(500).json({message: 'Ошибка, попытайтесь снова'}) 
