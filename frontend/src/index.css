@@ -36,10 +36,18 @@ code {
 
 .courseFilters {
   background-color: #2757B7 !important;
-  padding: 30px 0 30px 0;
+  /*padding: 30px 0 30px 0;*/
   width: 100%;
 }
 
 .rowFilters {
   padding: 20px 0px 20px 20px;
+}
+
+
+
+
+option{
+width: 210px;
+height: 46px;
 }

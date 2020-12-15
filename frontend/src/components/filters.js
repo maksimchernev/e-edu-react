@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Dropdown, DropdownButton, Container, Row, Col, InputGroup, FormControl} from 'react-bootstrap';
-
+import { Container, Row, Col, InputGroup, FormControl} from 'react-bootstrap';
+import React  from 'react';
 
 export const  Filters =() => {
       return(
@@ -10,56 +10,60 @@ export const  Filters =() => {
               <Row>
                 <Col xs={2}>
                   <Row className="rowFilters">
-                    <DropdownButton variant="light" id="dropdown-basic-button" title="Язык" >
-                      <Dropdown.Item href="#/action-1">Английский</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Русский</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Китайский</Dropdown.Item>
-                    </DropdownButton>
+                    <select className="browser-default custom-select">
+                      <option value="" selected disabled hidden>Язык</option>
+                      <option value="1">Английский</option>
+                      <option value="2">Русский</option>
+                      <option value="3">Китайский</option>
+                    </select>
                   </Row>
                   <Row className="rowFilters">
-                    <DropdownButton variant="light" id="dropdown-basic-button" title="Формат" >
-                      <Dropdown.Item href="#/action-1">Онлайн</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Оффлайн</Dropdown.Item>
-                    </DropdownButton>
-                  </Row>
-                </Col>
-                <Col xs={2}>
-                  <Row className="rowFilters">
-                    <DropdownButton variant="light" id="dropdown-basic-button" title="Категория">
-                    <Dropdown.Item href="#/action-1">Бесплатные</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Для начинающих</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Веб-разработка</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Разработка программ</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Веб-дизайн</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Мобильная разработка</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Разработка игр</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Кибербезопасность</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Data Science</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Тестирование</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Интернет-маркетинг</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Системное администрирование</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">GeekClub</Dropdown.Item>
-                  </DropdownButton>
-                  </Row>
-                  <Row className="rowFilters">
-                    <DropdownButton variant="light" id="dropdown-basic-button" title="Направление">
-                      <Dropdown.Item href="#/action-1">Английский</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Русский</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Китайский</Dropdown.Item>
-                    </DropdownButton>
+                    <select className="browser-default custom-select">
+                      <option value="" selected disabled hidden>Формат</option>
+                      <option value="1">Онлайн</option>
+                      <option value="2">Оффлайн</option>
+                    </select>
                   </Row>
                 </Col>
                 <Col xs={2}>
                   <Row className="rowFilters">
-                    <DropdownButton variant="light" id="dropdown-basic-button" title="Платформа">
-                      <Dropdown.Item href="#/action-1">SkillBox</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">GeekFactory</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Coursera</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Skillfactory</Dropdown.Item>
-                    </DropdownButton>
+                    <select className="browser-default custom-select">
+                      <option value="" selected disabled hidden>Категория</option>
+                      <option value="1">Бесплатные</option>
+                      <option value="2">Для начинающих</option>
+                      <option value="3">Веб-разработка</option>
+                      <option value="4">Разработка программ</option>
+                      <option value="5">Веб-дизайн</option>
+                      <option value="6">Мобильная разработка</option>
+                      <option value="7">Разработка игр</option>
+                      <option value="8">Кибербезопасность</option>
+                      <option value="9">Data Science</option>
+                      <option value="10">Тестирование</option>
+                      <option value="11">Интернет-маркетинг</option>
+                      <option value="12">Системное администрирование</option>
+                      <option value="13">GeekClub</option>
+                    </select>
                   </Row>
                   <Row className="rowFilters">
-                    <InputGroup className="mb-3">
+                    <select className="browser-default custom-select">
+                      <option value="" selected disabled hidden>Направление</option>
+                      <option value="1">Направление 1</option>
+                      <option value="2">Направление 2</option>
+                    </select>
+                  </Row>
+                </Col>
+                <Col xs={2}>
+                  <Row className="rowFilters">
+                      <select className="browser-default custom-select">
+                          <option value="" selected disabled hidden>Платформа</option>
+                          <option value="1">SkillBox</option>
+                          <option value="2">GeekFactory</option>
+                          <option value="3">Coursera</option>
+                          <option value="4">Skillfactory</option>
+                        </select>
+                  </Row>
+                  <Row className="rowFilters">
+                    <InputGroup>
                       <FormControl
                         placeholder="Цена от"
                         aria-label="priceFrom"
@@ -73,14 +77,14 @@ export const  Filters =() => {
                 </Col>
                 <Col xs={3}>
                   <Row className="rowFilters">
-                    <DropdownButton variant="light" id="dropdown-basic-button" title="Варианты профессий">
-                      <Dropdown.Item href="#/action-1">Английский</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Русский</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Китайский</Dropdown.Item>
-                    </DropdownButton>
+                    <select className="browser-default custom-select">
+                          <option value="" selected disabled hidden>Варианты профессий</option>
+                          <option value="1">Профессия 1</option>
+                          <option value="2">Профессия 2</option>
+                    </select>
                   </Row>
                   <Row className="rowFilters">
-                    <InputGroup className="mb-3">
+                    <InputGroup>
                       <FormControl
                         placeholder="Цена до"
                         aria-label="priceTo"
@@ -94,20 +98,22 @@ export const  Filters =() => {
                 </Col>
                 <Col xs={2}>
                   <Row className="rowFilters">
-                    <DropdownButton variant="light" id="dropdown-basic-button" title="Продолжительность">
-                      <Dropdown.Item href="#/action-1">2 - 6 часов</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">1 - 4 дней</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">1 - 3 месяца</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Более 3 месяцев</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Бессрочно</Dropdown.Item>
-                    </DropdownButton>
+                    <select className="browser-default custom-select">
+                          <option value="" selected disabled hidden>Продолжительность</option>
+                          <option value="1">2 - 6 часов</option>
+                          <option value="2">1 - 4 дней</option>
+                          <option value="3">1 - 3 месяца</option>
+                          <option value="4">Более 3 месяцев</option>
+                          <option value="5">Бессрочно</option>
+                    </select>
                   </Row>
                   <Row className="rowFilters">
-                    <DropdownButton variant="light" id="dropdown-basic-button" title="Основные навыки">
-                      <Dropdown.Item href="#/action-1">Skill 1</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Skill 2</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Skill 3</Dropdown.Item>
-                    </DropdownButton>
+                    <select className="browser-default custom-select">
+                          <option value="" selected disabled hidden>Основные навыки</option>
+                          <option value="1">Skill 1</option>
+                          <option value="2">Skill 2</option>
+                          <option value="3">Skill 3</option>
+                    </select>
                   </Row>
                 </Col>
               </Row>
