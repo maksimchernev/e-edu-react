@@ -19,16 +19,18 @@ export const  Usernav =() => {
 
       return(
         <div>
+
           <Navbar expand="lg">
             <Navbar.Brand href="/mainPage">
                 <img className="logo"  src={logo} />
             </Navbar.Brand>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ml-auto">
-                <Nav.Link href="/aboutUs">О нас</Nav.Link>
-                <Nav.Link href="/listOfCourses">Список курсов</Nav.Link>
-                <Nav.Link href="/partners">Партнеры</Nav.Link>
                 <Dropdown>
                   <Dropdown.Toggle variant="light" id="dropdown-basic">
                     Имя

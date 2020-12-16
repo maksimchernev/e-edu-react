@@ -8,6 +8,9 @@ import {ListCourses} from '../pages/Courses'
 import {OurPartners} from '../pages/PartnersPage'
 import {MyCourses} from '../pages/MyCourses'
 import {Settings} from  '../pages/Settings'
+import {Opinions} from  '../pages/Opinions'
+import {Vacancies} from  '../pages/Vacancies'
+import {Help} from  '../pages/Help'
 export const useRoutes = isAuthenticated => {
     if (isAuthenticated){
         return (
@@ -65,6 +68,15 @@ export const useRoutes = isAuthenticated => {
             </Route>
             <Route path ="/partners" exact>
                 <OurPartners/>
+            </Route>
+            <Route path ="/opinions" exact>
+                <Opinions/>
+            </Route>
+            <Route path ="/vacancies" exact>
+                <Vacancies/>
+            </Route>
+            <Route path ="/help" exact>
+                <Help/>
             </Route>
 
          </Switch>

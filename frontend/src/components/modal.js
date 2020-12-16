@@ -57,12 +57,7 @@ const changeHandler = event => {
                   </Button>
 
                 </Col>
-                <Col className="ml-auto">
-                  <Nav.Link href="/RegisterPage"><Button variant="primary" className="ml-auto" id="regButton">
-                    Регистрация
-                  </Button>
-                  </Nav.Link>
-                </Col>
+
               </Row>
               <a href="#Forgot-your-password">Забыли пароль?</a>
             </Form>
