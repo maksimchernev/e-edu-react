@@ -45,7 +45,6 @@ export const MainPage = () => {
             <Slider />
                 <h1>Популярные курсы</h1>
                 { cardInfo && <CourseCard cardInfo = {cardInfo} />}
-           
             <Footer />
         </div>    
     );
