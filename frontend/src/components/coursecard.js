@@ -1,25 +1,36 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {CardDeck, Row} from 'react-bootstrap';
 import{FlippingCard, FlippingCardBack, FlippingCardFront} from 'react-ui-cards';
 export const CourseCard =( { cardInfo }) => {
+
+  var rowCount =0;
+  var maxRowCount = 3;
+
+  return(
+
+  <tbody>
+        { cardInfo.map( (card) =>{
+
       return(
-        <div>
-          <CardDeck>
-            <Row>
-					 <FlippingCard className="card" style={{border: "2px solid #003399"}}>
+        <tr key = {card._id}>
+  
+					<FlippingCard className="card" style={{border: "2px solid #003399"}}>
                         <FlippingCardBack>
-                              Content that will be displayed on the back of the card
+                       <h3>Course field:</h3> <td>{card.field}</td>
+                       <h4>Course difficulty:</h4><td>{card.difficulty}</td>
                         </FlippingCardBack>
+
                         <FlippingCardFront>
-                             Content that will be displayed on the front of the card
+                        <h3>Course Name:</h3>
+                        <td>{card.name}</td>
                         </FlippingCardFront>
-                      </FlippingCard>
-                    
-                     
-		    </Row>
-          </CardDeck>
-          
-        </div>
-      );
-    } 
+            </FlippingCard>     
+        
+        
+        </tr>
+      )
+        })
+        }
+      </tbody>
+  )
+}

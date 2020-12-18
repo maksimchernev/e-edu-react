@@ -75,7 +75,6 @@ router.post(
         */
 
        const {firstName,secondName,lastName,mail,password} =  req.body 
-       console.log(req.body)
        const candidate = await UserCredentials.findOne({mail})
        
        if (candidate) {
@@ -83,7 +82,7 @@ router.post(
        }
 
 
-    const hashedPassword = await bcrypt.hash(password, 12)
+       const hashedPassword = await bcrypt.hash(password, 12)
 
        const userCredentials = new UserCredentials({_id: new mongoose.Types.ObjectId().toHexString(), firstName,secondName,lastName,mail,password: hashedPassword})
 

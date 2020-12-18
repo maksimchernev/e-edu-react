@@ -47,21 +47,7 @@ export const SettingsTab = (  {user} ) => {
 									               data-required-error="Поле не заполнено" placeholder={mail} name="mail" required/>
 				                            </div>
 			                          	</Col>
-			                          	<Col>
-				                            <div className="form-group has-feedback">
-				                                <img
-											      	className="d-block w-100"
-											      	src=""
-											      	alt="Photo"
-											    />
-				                            </div>
-			                          	</Col>
-			                          	<Col>
-				                            <div className="form-group has-feedback">
-					                            <Button variant="outline-secondary">Удалить фотографию</Button>{' '}
-					                            <Button variant="outline-secondary">Обновить фотографию</Button>
-				                            </div>
-			                          	</Col>
+			                          	
 			                        </Row>
 			                    </form>
 			                    <h3>Сменить пароль</h3>

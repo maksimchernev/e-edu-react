@@ -2,7 +2,7 @@ const {Router} = require ('express')
 const UserCredentials = require('../schemes/UserCredentials')
 const router = Router()
 const auth = require('../middleware/auth.middleware')
-const Courses = require('../schemes/Course')
+const Course = require('../schemes/Course')
 
 router.get(`/getData/:id`,auth, async (req,res)=>{
     try {
@@ -26,9 +26,9 @@ router.get(`/getData/:id`,auth, async (req,res)=>{
     }
 })
 
-router.get('/getСourses',auth, async (req,res)=>{
+router.get('/getCourses', async (req,res)=>{
     try {
-        const collection = await Courses.find(req.body)
+        const collection = await Course.find(req.body)
 
         res.json(collection)
 

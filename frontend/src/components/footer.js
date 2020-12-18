@@ -1,10 +1,9 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Icon } from 'semantic-ui-react'
 import {Button, Navbar, Nav} from 'react-bootstrap';
 export const Footer =() => {
 	return(
-    <footer class="footer">
+    <footer className="footer">
 
       <Navbar expand="lg">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
