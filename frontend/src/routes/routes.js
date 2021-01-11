@@ -11,6 +11,8 @@ import {Settings} from  '../pages/Settings'
 import {Opinions} from  '../pages/Opinions'
 import {Vacancies} from  '../pages/Vacancies'
 import {Help} from  '../pages/Help'
+
+
 export const useRoutes = isAuthenticated => {
     if (isAuthenticated){
         return (
@@ -41,6 +43,9 @@ export const useRoutes = isAuthenticated => {
 
                 <Route path ="/settings" exact>
                     <Settings/>
+                </Route>
+                <Route path ="/courses" exact>
+                    <ListCourses/>
                 </Route>
 
                 <Redirect to="/mainPage" />
@@ -78,7 +83,9 @@ export const useRoutes = isAuthenticated => {
             <Route path ="/help" exact>
                 <Help/>
             </Route>
-
+            <Route path ="/courses" exact>
+                 <ListCourses/>
+            </Route>
          </Switch>
       )
 
