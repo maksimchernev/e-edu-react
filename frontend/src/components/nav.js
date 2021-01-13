@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Button, Navbar, Nav, Form} from 'react-bootstrap'
 import { LoginModal} from './modal'
-import logo from'./logo.jpg'
+import logo from'../images/navbar/logo.png'
 import { useHistory } from 'react-router-dom'
 import { useHttp } from '../hooks/http.hooks'
 export const  Nav_ =() => {
@@ -33,7 +33,7 @@ const handleModal = () =>
         <div>
           <Navbar expand="lg">
             <Navbar.Brand href="/mainPage">
-                <img className="logo"  src={logo} />
+                <img className="logo-head"  src={logo} />
             </Navbar.Brand>
             <form className="form-inline my-2 my-lg-0">
               <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>

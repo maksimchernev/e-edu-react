@@ -10,10 +10,10 @@ export const CourseCard =( { cardInfo }) => {
 
 
       <div className = 'container'>
-      <div className="row">
+        <div className="row">
 
-        { cardInfo.map( (card) =>{
-      return(
+          { cardInfo.map( (card) =>{
+            return(
                 <div className="col">
                   <div key = {card._id}>   
 					                  <FlippingCard className="card" style={{border: "2px solid #003399"}}>
@@ -30,8 +30,8 @@ export const CourseCard =( { cardInfo }) => {
                    
                   </div>
                 </div>
-      )
-        })
+              )
+          })
         }
         </div>
       </div>

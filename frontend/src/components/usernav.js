@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Dropdown} from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
-import logo from'./logo.jpg'
+import logo from'../images/navbar/logo.png'
 import { AuthContext } from '../context/AuthContext';
+import '../сss/navbar.css'
 
 
 export const  Usernav =() => {
@@ -22,7 +23,7 @@ export const  Usernav =() => {
 
           <Navbar expand="lg">
             <Navbar.Brand href="/mainPage">
-                <img className="logo"  src={logo} />
+                <img className="logo-head"  src={logo} />
             </Navbar.Brand>
             <form className="form-inline my-2 my-lg-0">
               <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
