@@ -1,0 +1,18 @@
+.coursecard-grid{
+position: relative;
+width: 1274.45px;
+height: 1792px;
+margin: auto;
+top: 34.2px;
+
+filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.coursecard-unit{
+    position: absolute;
+    width: 422.94px;
+    height: 482.15px;
+    
+    background: #FFFFFF;
+    border-radius: 10px
+}

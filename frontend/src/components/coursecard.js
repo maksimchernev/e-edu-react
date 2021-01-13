@@ -1,6 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import{FlippingCard, FlippingCardBack, FlippingCardFront} from 'react-ui-cards';
+import '../сss/coursecard.css'
 export const CourseCard =( { cardInfo }) => {
 
   var rowCount =0;
@@ -9,14 +10,15 @@ export const CourseCard =( { cardInfo }) => {
   return(
 
 
-      <div className = 'container'>
+      <div className = 'coursecard-grid'>
         <div className="row">
 
           { cardInfo.map( (card) =>{
             return(
-                <div className="col">
+              <div className="col">
+                <div className="coursecard-unit">
                   <div key = {card._id}>
-					                  <FlippingCard className="card" style={{border: "2px solid #003399"}}>
+					                  <FlippingCard >
                               <FlippingCardBack>
                                 <h3>Course field:</h3><h6>{card.field}</h6>
                                 <h4>Course difficulty:</h4><h6>{card.difficulty}</h6>
@@ -28,6 +30,7 @@ export const CourseCard =( { cardInfo }) => {
                               </FlippingCardFront>
                             </FlippingCard>
 
+                    </div>
                   </div>
                 </div>
               )

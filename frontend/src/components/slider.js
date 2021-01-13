@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel} from 'react-bootstrap';
 import im from '../images/12.jpg'
 import im1 from '../images/13.jpg'
+import '../сss/slider.css'
 
 export const Slider =() => {
 
@@ -13,7 +14,7 @@ export const Slider =() => {
   };
 
       return(
-        <div>
+        <div className="slider-head">
           	<Carousel activeIndex={index} onSelect={handleSelect}>
 	  			<Carousel.Item>
 				    <img

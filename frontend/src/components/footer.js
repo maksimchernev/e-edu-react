@@ -1,9 +1,11 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Navbar, Nav} from 'react-bootstrap';
+import '../сss/footer.css'
+
 export const Footer =() => {
 	return(
-    <footer className="footer">
+    <footer className="footer-grid ">
 
       <Navbar expand="lg">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

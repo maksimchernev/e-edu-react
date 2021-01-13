@@ -21,9 +21,9 @@ export const  Usernav =() => {
       return(
         <div>
 
-          <Navbar expand="lg">
+          <Navbar className = "nav-background" expand="lg" >
             <Navbar.Brand href="/mainPage">
-                <img className="logo-head"  src={logo} />
+                <img className="logo-head" src={logo} />
             </Navbar.Brand>
             <form className="form-inline my-2 my-lg-0">
               <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>

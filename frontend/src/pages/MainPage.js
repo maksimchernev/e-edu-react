@@ -4,6 +4,7 @@ import  {CourseCard}  from '../components/coursecard'
 import  {Footer}  from '../components/footer'
 import { AuthContext } from '../context/AuthContext'
 import { useHttp } from '../hooks/http.hooks'
+import "../сss/mainpage.css"
 
 export const MainPage = () => { 
 
@@ -41,11 +42,10 @@ export const MainPage = () => {
 
 
     return (
-        <div>
+        <div className="mainpage-grid">
             <Slider />
-                <h1>Популярные курсы</h1>
                 { cardInfo && <CourseCard cardInfo = {cardInfo} />}
-            <Footer />
-        </div>    
+            <Footer/>
+            </div>
     );
 }

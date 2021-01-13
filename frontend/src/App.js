@@ -19,7 +19,7 @@ return (
         <Router>
         {!isAuthenticated && <Nav_/>}
         {isAuthenticated && <Usernav/>}
-          <div className="container">
+          <div>
           {routes}
           </div>
         </Router>

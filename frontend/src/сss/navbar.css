@@ -1,0 +1,17 @@
+.logo-head{
+position: absolute;
+width: 164.4px;
+height: 96px;
+left: 11px;
+top: 0px;
+}
+
+.nav-background{ 
+min-width: 100%;
+position: absolute;
+width: 1440px;
+height: 102px;
+left: 0px;
+top: 0px;
+background: #121921;
+}
