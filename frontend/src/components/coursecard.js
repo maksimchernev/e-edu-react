@@ -15,7 +15,7 @@ export const CourseCard =( { cardInfo }) => {
           { cardInfo.map( (card) =>{
             return(
                 <div className="col">
-                  <div key = {card._id}>   
+                  <div key = {card._id}>
 					                  <FlippingCard className="card" style={{border: "2px solid #003399"}}>
                               <FlippingCardBack>
                                 <h3>Course field:</h3><h6>{card.field}</h6>
@@ -26,8 +26,8 @@ export const CourseCard =( { cardInfo }) => {
                                 <h3>Course Name:</h3>
                                 <h6>{card.name}</h6>
                               </FlippingCardFront>
-                            </FlippingCard>   
-                   
+                            </FlippingCard>
+
                   </div>
                 </div>
               )
