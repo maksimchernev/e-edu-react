@@ -1,0 +1,21 @@
+.filters-grid{
+
+padding: 100px 0px 40px 0px;
+}
+
+.courseFilters {
+  background-color: #2757B7 !important;
+  width: 100%;
+left: 0px;
+top: 0px;
+
+}
+
+.rowFilters {
+  padding: 20px 0px 20px 20px;
+}
+
+option{
+width: 210px;
+height: 46px;
+}

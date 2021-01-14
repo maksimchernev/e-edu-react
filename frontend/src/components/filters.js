@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, InputGroup, FormControl} from 'react-bootstrap';
 import React  from 'react';
+import '../сss/filters.css'
 
 export const  Filters =() => {
       return(

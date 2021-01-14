@@ -38,7 +38,7 @@ const [cardInfo, setCardInfo] = useState(null)
        }, [getCourses,rendered])
 
     return (
-          <div>
+          <div className="filters-grid">
             <Filters />
             { cardInfo && <CourseCard cardInfo = {cardInfo} />}
             <Footer />
