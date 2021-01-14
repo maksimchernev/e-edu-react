@@ -4,7 +4,7 @@ import React  from 'react';
 
 export const  Filters =() => {
       return(
-        <div>
+        <div >
           <div className="courseFilters" fluid>
             <Container>
               <Row>

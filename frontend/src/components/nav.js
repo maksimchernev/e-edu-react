@@ -5,6 +5,8 @@ import { LoginModal} from './modal'
 import logo from'../images/navbar/logo.png'
 import { useHistory } from 'react-router-dom'
 import { useHttp } from '../hooks/http.hooks'
+
+
 export const  Nav_ =() => {
 
 const [flag, setFlag] = useState(false)
@@ -31,7 +33,7 @@ const handleModal = () =>
 
       return(
         <div>
-          <Navbar expand="lg">
+          <Navbar className="nav-background" expand="lg">
             <Navbar.Brand href="/mainPage">
                 <img className="logo-head"  src={logo} />
             </Navbar.Brand>
@@ -49,8 +51,8 @@ const handleModal = () =>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ml-auto">
-                <Button variant="light" onClick={handleModal}>Вход</Button>
-                <Nav.Link href="/RegisterPage"><Button variant="light" id="regButton">
+                <Button variant="light" size="xl" onClick={handleModal}>Вход</Button>
+                <Nav.Link href="/RegisterPage"><Button variant="light" size="xl" id="regButton">
                     Регистрация
                 </Button>
                 </Nav.Link>
