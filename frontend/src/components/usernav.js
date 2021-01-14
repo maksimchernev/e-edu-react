@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button, Navbar, Nav, Form, Row, Col,Dropdown} from 'react-bootstrap'
+import {Button, Navbar, Nav, Form, Row, Col, Dropdown, InputGroup, FormControl} from 'react-bootstrap'
 import { useHistory } from 'react-router-dom';
 import logo from'../images/navbar/logo.png'
 import { AuthContext } from '../context/AuthContext';
@@ -20,23 +20,28 @@ export const  Usernav =() => {
 
       return(
         <div>
+          <Navbar className = "nav-background" expand="lg">
 
-          <Navbar className = "nav-background" expand="lg" >
             <Navbar.Brand href="/mainPage">
                 <img className="logo-head" src={logo} />
             </Navbar.Brand>
-           <Col>
-                <Row>
-                    <form className="form-inline my-2 my-lg-0">
-                      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-                      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </Row>
-                <Row>
+
+            <Col sm="9" className="searchArea">
+            <Form.Row inline className="justify-content-center">
+              <InputGroup className="mb-3" className="search">
+                <FormControl type="text" placeholder="Search"/>  
+                <InputGroup.Append>
+                  <Button variant="outline-success" className="searchButton">Search</Button>
+                </InputGroup.Append>
+              </InputGroup>
+            </Form.Row>
+                <Row className="justify-content-center">
                     <a href="/courses"><p>Расширенный поиск</p></a>
                 </Row>
             </Col>
+
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ml-auto">
                 <Dropdown>
@@ -51,6 +56,7 @@ export const  Usernav =() => {
                 </Dropdown>
               </Nav>
             </Navbar.Collapse>
+
           </Navbar>
         </div>
       );

@@ -30,3 +30,19 @@ background: #121921;
     border-radius: 6px;
 
     }
+
+    .search {
+      width: 60%;
+    }
+    
+    .searchButton {
+      background-color: #FDBE67;
+      border: 0cm;
+      color: #FFFFFF;
+    }
+    
+    .searchButton:hover {
+      background-color: #FDBE67;
+      border: 0cm;
+      color: #FFFFFF;
+    }
