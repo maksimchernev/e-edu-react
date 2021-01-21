@@ -10,7 +10,7 @@ export const Footer =() => {
       <Navbar expand="lg">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                  <Nav className="ml-auto">
+                  <Nav className="ml-auto color-text">
                     <Nav.Link href="/opinions">Отзывы</Nav.Link>
                     <Nav.Link href="/aboutUs">О проекте</Nav.Link>
                     <Nav.Link href="/partners">Компаниям</Nav.Link>

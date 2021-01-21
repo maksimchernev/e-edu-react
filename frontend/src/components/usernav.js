@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import logo from'../images/navbar/logo.png'
 import { AuthContext } from '../context/AuthContext';
 import '../сss/navbar.css'
-
+import person1 from '../images/navbar/person1.png'
 
 export const  Usernav =() => {
 
@@ -45,7 +45,8 @@ export const  Usernav =() => {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ml-auto">
                 <Dropdown>
-                  <Dropdown.Toggle variant="light" id="dropdown-basic">
+                  <Dropdown.Toggle variant="dark" className="custom-btn textColor" id="dropdown-basic">
+                    <img className="person1-head"  src={person1} />
                     Имя
                   </Dropdown.Toggle>
                   <Dropdown.Menu id="dropdown-menu-right" style={{right: 0, left:"auto"}}>
