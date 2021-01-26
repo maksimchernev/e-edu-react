@@ -50,8 +50,18 @@
   line-height: 21px;
 }
 
-input[type="text"]::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder {
   color: #fdbe67;
+}
+
+.form-control::-moz-placeholder {
+  color: #ccc;
+}
+
+.form-control:focus {
+  background-color: #121921;
+  border: 0;
+  box-shadow: none;
 }
 
 .navButton {
@@ -81,7 +91,6 @@ input[type="text"]::-webkit-input-placeholder {
   box-shadow: none;
 }
 
-
 .navButton:active::after {
   background-color: transparent;
   border: 0px;
@@ -89,7 +98,6 @@ input[type="text"]::-webkit-input-placeholder {
   width: 100%;
   padding: 0px;
 }
-
 
 .navLink {
   color: #fdbe67;
@@ -116,7 +124,7 @@ input[type="text"]::-webkit-input-placeholder {
 
 .imgButton {
   width: auto;
-  height: 39px; 
+  height: 39px;
 }
 
 .changeStyleSwitch {

@@ -52,8 +52,8 @@ export const Nav_ = () => {
 
   return (
     <React.Fragment>
-      <Navbar className="nav-background p-0" expand="lg">
-        <Container>
+      <Navbar className="nav-background p-2" expand="lg">
+        {/* <Container> */}
           <Form>
             <Form.Check 
               type="switch"
@@ -67,11 +67,11 @@ export const Nav_ = () => {
           <Nav className="ml-auto">
             <button className="navButton navLink"><img src={feedback} alt="feedback"/> Обратная связь</button>
           </Nav>
-        </Container>
+        {/* </Container> */}
       </Navbar>
 
-      <Navbar className="nav-background p-0" expand="lg">
-        <Container>
+      <Navbar className="nav-background p-2" expand="lg">
+        {/* <Container> */}
           <Col sm="2" className="colNavButtons"> 
             <Button variant="primary" size="lg" className="coursesButton">
               <img src={book} alt="Courses"/> Курсы
@@ -136,7 +136,7 @@ export const Nav_ = () => {
               </Nav.Link>
             </Nav>
           </Navbar.Collapse> */}
-        </Container>
+        {/* </Container> */}
       </Navbar>
       <LoginModal show={flag} onHide={handleModal} />
     </React.Fragment>

@@ -1,16 +1,17 @@
 .coursecard-grid{
-position: relative;
+/* position: relative; */
 width: 1274.45px;
-height: 1792px;
+max-height: 1812px;
 margin: auto;
-top: 34.2px;
+margin-top: 58px;
+/* top: 34.2px; */
 
 filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .coursecard-unit{
-    position: absolute;
-    width: 422.94px;
+    /* position: absolute; */
+    width: 411px;
     height: 482.15px;
     
     background: #FFFFFF;
