@@ -1,9 +1,7 @@
 .logo-head {
   position: relative;
-  width: 164.4px;
-  height: 96px;
-  left: 11px;
-  top: 0px;
+  width: 117px;
+  height: 68.32px;
 }
 
 .nav-background {
@@ -26,12 +24,11 @@
 .btn-xl {
   height: 37px;
   width: 122.57px;
-
   border-radius: 6px;
 }
 
 .search {
-  width: 60%;
+  width: 80%;
 }
 
 /* .search input {
@@ -46,7 +43,7 @@
 }
 
 .form-control {
-  background-color: #121921;
+  background-color: transparent;
   border: 0;
   font-family: Roboto, sans-serif;
   font-size: 18px;
@@ -57,14 +54,89 @@ input[type="text"]::-webkit-input-placeholder {
   color: #fdbe67;
 }
 
-.searchButton {
-  background-color: #fdbe67;
-  border: 0cm;
-  color: #ffffff;
+.navButton {
+  background-color: transparent;
+  border: 0px;
+  color: #fdbe67;
+  width: 100%;
+  padding: 0px;
+  text-align: center;
 }
 
-.searchButton:hover {
+.navButton:hover {
+  background-color: transparent;
+  border: 0px;
+  color: #fdbe67;
+  width: 100%;
+  padding: 0px;
+}
+
+.navButton:focus {
+  background-color: transparent;
+  border: 0px;
+  color: #fdbe67;
+  width: 100%;
+  padding: 0px;
+  outline: none;
+  box-shadow: none;
+}
+
+
+.navButton:active::after {
+  background-color: transparent;
+  border: 0px;
+  color: #fdbe67;
+  width: 100%;
+  padding: 0px;
+}
+
+
+.navLink {
+  color: #fdbe67;
+}
+.coursesButton {
   background-color: #fdbe67;
-  border: 0cm;
-  color: #ffffff;
+  border-radius: 10px;
+  color: #121921;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+  border: 0px;
+}
+
+.coursesButton:hover {
+  background-color: #fdbe67;
+  color: #121921;
+}
+
+.imgButton {
+  width: auto;
+  height: 39px; 
+}
+
+.changeStyleSwitch {
+  transform: rotate(-90deg);
+}
+
+.colFilters {
+  padding: 0px;
+}
+
+.colNavButtons {
+  padding: 0px;
+  height: 70px;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+p {
+  margin-bottom: 0px;
 }

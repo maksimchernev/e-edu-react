@@ -9,7 +9,7 @@ export const  Filters =() => {
           <div className="courseFilters" fluid>
             <Container>
               <Row>
-                <Col xs={2}>
+                <Col xs={2} className="colFilters">
                   <Row className="rowFilters">
                     <select className="browser-default custom-select">
                       <option value="" selected disabled hidden>Язык</option>
@@ -26,7 +26,7 @@ export const  Filters =() => {
                     </select>
                   </Row>
                 </Col>
-                <Col xs={2}>
+                <Col xs={2} className="colFilters">
                   <Row className="rowFilters">
                     <select className="browser-default custom-select">
                       <option value="" selected disabled hidden>Категория</option>
@@ -53,7 +53,7 @@ export const  Filters =() => {
                     </select>
                   </Row>
                 </Col>
-                <Col xs={2}>
+                <Col xs={2} className="colFilters">
                   <Row className="rowFilters">
                       <select className="browser-default custom-select">
                           <option value="" selected disabled hidden>Платформа</option>
@@ -69,6 +69,7 @@ export const  Filters =() => {
                         placeholder="Цена от"
                         aria-label="priceFrom"
                         aria-describedby="basic-addon1"
+                        className="priceInput"
                       />
                       <InputGroup.Append>
                         <InputGroup.Text id="basic-addon1">₽</InputGroup.Text>
@@ -76,7 +77,7 @@ export const  Filters =() => {
                     </InputGroup>
                   </Row>
                 </Col>
-                <Col xs={3}>
+                <Col xs={3} className="colFilters">
                   <Row className="rowFilters">
                     <select className="browser-default custom-select">
                           <option value="" selected disabled hidden>Варианты профессий</option>
@@ -90,6 +91,7 @@ export const  Filters =() => {
                         placeholder="Цена до"
                         aria-label="priceTo"
                         aria-describedby="basic-addon1"
+                        className="priceInput"
                       />
                       <InputGroup.Append>
                         <InputGroup.Text id="basic-addon1">₽</InputGroup.Text>
@@ -97,7 +99,7 @@ export const  Filters =() => {
                     </InputGroup>
                   </Row>
                 </Col>
-                <Col xs={2}>
+                <Col xs={3} className="colFilters">
                   <Row className="rowFilters">
                     <select className="browser-default custom-select">
                           <option value="" selected disabled hidden>Продолжительность</option>

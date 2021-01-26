@@ -6,7 +6,6 @@ import '../сss/footer.css'
 export const Footer =() => {
 	return(
     <footer className="footer-grid ">
-
       <Navbar expand="lg">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

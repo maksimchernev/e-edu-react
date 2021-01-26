@@ -47,3 +47,6 @@ nav.ml-auto{
     text-align: right;
 }
 
+.row {
+  margin: 0px !important;
+}
