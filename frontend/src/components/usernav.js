@@ -58,13 +58,18 @@ export const Usernav = () => {
         {/* </Container> */}
       </Navbar>
 
+      
       <Navbar className="nav-background p-2" expand="lg">
         {/* <Container> */}
+       
         <Col sm="2" className="colNavButtons">
+        <Navbar.Brand href="/courses">
           <Button variant="primary" size="lg" className="coursesButton">
             <img src={book} alt="Courses" /> Курсы
           </Button>
+          </Navbar.Brand>
         </Col>
+       
 
         <Col sm="6" className="colNavButtons">
           <Form.Row inline className="justify-content-center">
