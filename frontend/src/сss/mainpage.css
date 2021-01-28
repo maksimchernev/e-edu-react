@@ -5,7 +5,7 @@
 .mainpage-grid {
   /* position: absolute; */
   /* min-width: 100%; */
-  /* height: 2476px; */
+   max-height: 2476px; 
   /* left: 0px; */
   /* top: 96px; */
   background: #e9edee;

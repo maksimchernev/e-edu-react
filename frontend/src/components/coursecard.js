@@ -4,10 +4,7 @@ import{FlippingCard, FlippingCardBack, FlippingCardFront} from 'react-ui-cards';
 import '../сss/coursecard.css'
 export const CourseCard =( { cardInfo }) => {
 
-  var rowCount =0;
-  var maxRowCount = 3;
-
-  cardInfo.map(card => console.log(card._id));
+  ;
 
   return(
 
@@ -15,20 +12,27 @@ export const CourseCard =( { cardInfo }) => {
       <div className = 'coursecard-grid d-flex flex-wrap align-content-between justify-content-between'>
         {/* <div className="d-flex flex-wrap"> */}
 
-          { cardInfo.map( (card) =>{
+          { cardInfo.map( (card,index) =>{
+
+            if (index < 6)
+            {
+
+            
+           
             return(
               // <div className="col-md-4">
                 <div className="coursecard-unit mb-5">
                   <div key = {card._id}>
 					                  <FlippingCard>
                               <FlippingCardBack>
-                                <h3>Course field:</h3><h6>{card.field}</h6>
-                                <h4>Course difficulty:</h4><h6>{card.difficulty}</h6>
+                                <h3>Course title:</h3><h6>{card.title}</h6>
+                                <h4>Course duration:</h4><h6>{card.duration}</h6>
+                                 <h3>Course price:</h3> <h6>{card.price}</h6>
                               </FlippingCardBack>
 
                               <FlippingCardFront>
                                 <h3>Course Name:</h3>
-                                <h6>{card.name}</h6>
+                                <h6>{card.title}</h6>
                               </FlippingCardFront>
                             </FlippingCard>
 
@@ -36,7 +40,8 @@ export const CourseCard =( { cardInfo }) => {
                   </div>
                 // </div>
               )
-          })
+          }})
+
         }
         {/* </div> */}
       </div>
