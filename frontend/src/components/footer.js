@@ -1,6 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button, Navbar, Nav, Row, Col} from 'react-bootstrap';
+import {Row, Col, Button, Navbar, Nav} from 'react-bootstrap';
 import '../сss/footer.css'
 import fb from '../images/footer/Facebook - Negative.png'
 import inst from '../images/footer/Instagram - Negative.png'
@@ -12,11 +12,23 @@ export const Footer =() => {
 	return(
     <footer className="footer-grid ">
       <Navbar expand="lg">
-            <a href="#"><img className="soc-net" src={fb} /></a>
-            <a href="#"><img className="soc-net" src={inst} /></a>
-            <a href="#"><img className="soc-net" src={tw} /></a>
-            <a href="#"><img className="soc-net" src={vk} /></a>
-            <a href="#"><img className="soc-net" src={yout} /></a>
+            <Row>
+                <Col xs={2} className="colLinkls">
+                    <a href="#"><img className="soc-net" src={fb} /></a>
+                </Col>
+                <Col xs={2} className="colLinkls">
+                    <a href="#"><img className="soc-net" src={inst} /></a>
+                </Col>
+                <Col xs={2} className="colLinkls">
+                    <a href="#"><img className="soc-net" src={tw} /></a>
+                </Col>
+                <Col xs={2} className="colLinkls">
+                    <a href="#"><img className="soc-net" src={vk} /></a>
+                </Col>
+                <Col xs={2} className="colLinkls">
+                    <a href="#"><img className="soc-net" src={yout} /></a>
+                </Col>
+            </Row>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="ml-auto color-text">

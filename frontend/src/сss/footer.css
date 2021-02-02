@@ -11,3 +11,7 @@ background: #121921
 .nav-link{
     color: #FFFFFF !important;
 }
+
+.colLinkls {
+    padding: 0px 20px 0px 20px; 
+}
