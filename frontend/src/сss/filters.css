@@ -1,14 +1,12 @@
-.filters-grid{
-
+filters-grid{
 padding: 0px 0px 40px 0px;
 }
 
 .courseFilters {
   background-color: #121921 !important;
-  width: 100%;
-left: 0px;
-top: 0px;
-
+  position: relative;
+  z-index: 1;
+  min-width:100%;
 }
 
 .rowFilters {
@@ -22,4 +20,35 @@ height: 46px;
 
 .priceInput{
   background-color: white !important;
+}
+
+.priceInput::-webkit-input-placeholder {
+    color:  #2C3552 50 % !important;
+}
+.priceInput:-moz-placeholder {
+    /* FF 4-18 */
+    color:  #2C3552  !important;
+    opacity: 1;
+
+}
+.priceInput::-moz-placeholder {
+    /* FF 19+ */
+    color:  #2C3552  !important;
+    opacity: 1;
+}
+.priceInput:-ms-input-placeholder {
+    /* IE 10+ */
+    color:  #2C3552  !important;
+}
+.priceInput::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color:  #2C3552  !important;
+ }
+.priceInput::placeholder {
+    /* modern browser */
+    color:  #2C3552  !important;
+}
+
+.rowFilters select{
+    color:  #2C3552  !important;
 }

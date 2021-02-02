@@ -1,6 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button, Navbar, Nav} from 'react-bootstrap';
+import {Button, Navbar, Nav, Row, Col} from 'react-bootstrap';
 import '../сss/footer.css'
 import fb from '../images/footer/Facebook - Negative.png'
 import inst from '../images/footer/Instagram - Negative.png'

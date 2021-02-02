@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Button,
@@ -10,7 +10,7 @@ import {
   Dropdown,
   InputGroup,
   FormControl,
-  Container,
+  Container, Collapse
 } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
@@ -25,8 +25,10 @@ import comparison from "../images/navbar/comparison.png";
 import horn from "../images/navbar/horn.png";
 import user from "../images/navbar/user.png";
 import unknownuser from "../images/navbar/unknownuser.png";
+import {Filters} from '../components/filters'
 
 export const Usernav = () => {
+  const [open, setOpen] = useState(false);
   const auth = useContext(AuthContext);
   const history = useHistory();
 
@@ -84,10 +86,15 @@ export const Usernav = () => {
           </Form.Row>
 
           <Row className="justify-content-center">
-            <Button href="/courses" className="navButton" variant="link">
-              <p className="navLink">Расширенный поиск</p>
-            </Button>
-          </Row>
+                <Button onClick={() => setOpen(!open)} className="navButton" variant="link" aria-controls="collapse" aria-expanded={open} >
+                    <p className="navLink" >Расширенный поиск</p>
+                </Button>
+                <Collapse in={open} className="filters">
+                    <div id="collapse" fluid={true}>
+                         <Filters />
+                    </div>
+                </Collapse>
+            </Row>
         </Col>
 
         <Col className="colNavButtons">

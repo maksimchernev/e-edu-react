@@ -10,8 +10,7 @@ import {
   Dropdown, 
   InputGroup,
   FormControl,
-  Container,
-} from "react-bootstrap";
+  Container, Collapse} from "react-bootstrap";
 import { LoginModal } from "./modal";
 import logo from "../images/navbar/Эмблемка.svg";
 import Union from "../images/navbar/Union.png";
@@ -22,12 +21,14 @@ import comparison from "../images/navbar/comparison.png";
 import horn from "../images/navbar/horn.png";
 import user from "../images/navbar/user.png";
 import unknownuser from "../images/navbar/unknownuser.png";
+import {Filters} from '../components/filters'
 
 
 import { useHistory } from "react-router-dom";
 import { useHttp } from "../hooks/http.hooks";
 
 export const Nav_ = () => {
+  const [open, setOpen] = useState(false);
   const [flag, setFlag] = useState(false);
   const { request } = useHttp();
   const history = useHistory();
@@ -55,7 +56,7 @@ export const Nav_ = () => {
       <Navbar className="nav-background p-2" expand="lg">
         {/* <Container> */}
           <Form>
-            <Form.Check 
+            <Form.Check
               type="switch"
               id="custom-switch"
               className="changeStyleSwitch"
@@ -72,7 +73,7 @@ export const Nav_ = () => {
 
       <Navbar className="nav-background p-2" expand="lg">
         {/* <Container> */}
-          <Col sm="2" className="colNavButtons"> 
+          <Col sm="2" className="colNavButtons">
             <Button variant="primary" size="lg" className="coursesButton">
               <img src={book} alt="Courses"/> Курсы
             </Button>
@@ -89,14 +90,17 @@ export const Nav_ = () => {
             </Form.Row>
 
             <Row className="justify-content-center">
-              <Button href="/courses" className="navButton" variant="link" >
-                <p className="navLink">Расширенный поиск</p>
-              </Button>
+                <Button onClick={() => setOpen(!open)} className="navButton" variant="link" aria-controls="collapse" aria-expanded={open} >
+                    <p className="navLink" >Расширенный поиск</p>
+                </Button>
+                <Collapse in={open} className="filters">
+                    <div id="collapse" fluid={true}>
+                         <Filters />
+                    </div>
+                </Collapse>
             </Row>
           </Col>
-
-          
-          <Col className="colNavButtons"> 
+          <Col className="colNavButtons">
             <Button className="navButton" variant="link" onClick={handleModal}>
               <img src={unknownuser} alt="user" className="imgButton"/>
               <p>Войти</p>
