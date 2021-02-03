@@ -1,19 +1,41 @@
-.coursecard-grid{
-/* position: relative; */
-width: 1274.45px;
-max-height: 1812px;
-margin: auto;
-margin-top: 58px;
-/* top: 34.2px; */
+.coursecard-grid {
+  /* position: relative; */
+  width: 1274.45px;
+  max-height: 1812px;
+  margin: auto;
+  margin-top: 58px;
+  /* top: 34.2px; */
 
-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.coursecard-unit{
-    /* position: absolute; */
-    width: 411px;
-    height: 482.15px;
-    
-    background: #FFFFFF;
-    border-radius: 10px
+.coursecard-unit {
+  /* position: absolute; */
+  width: 411px;
+  height: 482.15px;
+
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.like-btn.selected {
+  width: 34px;
+  height: 30px;
+  background-image: url(../images/coursecard/LikeBold.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.like-btn {
+  width: 34px;
+  height: 30px;
+  border: 0;
+  background-color: #fff;
+  background-image: url(../images/coursecard/Like.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.like-btn:focus {
+  outline: 0;
 }
