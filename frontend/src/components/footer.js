@@ -32,11 +32,11 @@ export const Footer =() => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="ml-auto color-text">
-                    <Nav.Link href="/opinions">Отзывы</Nav.Link>
-                    <Nav.Link href="/aboutUs">О проекте</Nav.Link>
-                    <Nav.Link href="/partners">Компаниям</Nav.Link>
-                    <Nav.Link href="/vacancies">Вакансиии</Nav.Link>
-                    <Nav.Link href="/help">Помощь</Nav.Link>
+                    <Nav.Link href="/opinions" className="footerLink">Отзывы</Nav.Link>
+                    <Nav.Link href="/aboutUs" className="footerLink">О проекте</Nav.Link>
+                    <Nav.Link href="/partners" className="footerLink">Компаниям</Nav.Link>
+                    <Nav.Link href="/vacancies" className="footerLink">Вакансиии</Nav.Link>
+                    <Nav.Link href="/help" className="footerLink">Помощь</Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
             </Navbar>

@@ -1,0 +1,36 @@
+.tabsMyAcc {
+    background-color: white;
+    border: 1px solid #121921;
+    color: black !important;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.tabsMyAcc.active {
+    background-color: #fdbe67 !important;
+    border: 1px solid #fdbe67;
+    color: black !important;
+    outline: none !important;
+
+}
+
+.tab_content {
+    border: #cccccc;
+    border-style: solid;
+    padding: 10px;
+    border-width: 1px;
+  }
+
+.tab_content:active {
+    border: #cccccc;
+    background-color: white;
+    border-style: solid;
+    padding: 10px;
+    border-width: 1px;
+  }
+ 
+.form-control {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+  
+  

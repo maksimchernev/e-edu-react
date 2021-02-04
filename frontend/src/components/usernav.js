@@ -26,6 +26,9 @@ import horn from "../images/navbar/horn.png";
 import user from "../images/navbar/user.png";
 import unknownuser from "../images/navbar/unknownuser.png";
 import {Filters} from '../components/filters'
+import my_courses from '../images/navbar/my_courses.png'
+import settings from '../images/navbar/settings.png'
+import sign_out from '../images/navbar/sign_out.png'
 
 export const Usernav = () => {
   const [open, setOpen] = useState(false);
@@ -110,11 +113,11 @@ export const Usernav = () => {
             </Dropdown.Toggle>
             <Dropdown.Menu
               id="dropdown-menu-right"
-              style={{ right: 0, left: "auto" }}
+              style={{ right: "auto", left: "auto" }}
             >
-              <Dropdown.Item href="/myCourses">Мои курсы</Dropdown.Item>
-              <Dropdown.Item href="/settings">Настройки</Dropdown.Item>
-              <Dropdown.Item onClick={logoutHandler}>Выход</Dropdown.Item>
+              <Dropdown.Item href="/myCourses" className="dropDownLink"><img src={my_courses} alt="Courses" className="dropDownIcon"/>Мои курсы</Dropdown.Item>
+              <Dropdown.Item href="/settings" className="dropDownLink"><img src={settings} alt="Courses" className="dropDownIcon"/>Настройки</Dropdown.Item>
+              <Dropdown.Item onClick={logoutHandler} className="dropDownLink"><img src={sign_out} alt="Courses" className="dropDownIcon"/>Выход</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Col>

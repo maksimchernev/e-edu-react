@@ -1,6 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Tab, Row, Col, Nav, Form, Button} from 'react-bootstrap';
+import '../сss/myaccount.css'
 
 export const SettingsTab = (  {user} ) => {
 
@@ -18,16 +19,40 @@ export const SettingsTab = (  {user} ) => {
 	            <Col sm={3}>
 	              <Nav variant="pills" className="flex-column">
 	                <Nav.Item>
-	                  <Nav.Link eventKey="first">Аккаунт</Nav.Link>
+	                  <Nav.Link eventKey="first" className="tabsMyAcc">Аккаунт</Nav.Link>
 	                </Nav.Item>
 	                <Nav.Item>
-	                  <Nav.Link eventKey="second">Уведомления</Nav.Link>
+	                  <Nav.Link eventKey="second" className="tabsMyAcc">Уведомления</Nav.Link>
 	                </Nav.Item>
 	              </Nav>
 	            </Col>
 	            <Col sm={9}>
 	              	<Tab.Content>
 		                <Tab.Pane eventKey="first">
+						<Form>
+							<Form.Group controlId="formBasicEmail">
+								<Form.Control type="text" placeholder="Имя" />
+							</Form.Group>
+							<Form.Group controlId="formBasicEmail">
+								<Form.Control type="text" placeholder="Фамилия" />
+							</Form.Group>
+							<Form.Group controlId="formBasicEmail">
+								<Form.Control type="mail" placeholder="Электронная почта" />
+							</Form.Group>
+
+							<Form.Group controlId="formBasicPassword">
+								<Form.Label>Password</Form.Label>
+								<Form.Control type="password" placeholder="Password" />
+							</Form.Group>
+							<Form.Group controlId="formBasicCheckbox">
+								<Form.Check type="checkbox" label="Check me out" />
+							</Form.Group>
+							<Button variant="primary" type="submit">
+								Submit
+							</Button>
+							</Form>
+
+							
 		                	<div className="tab_content">
 			                	<h3>Основная информация</h3>
 			                	<form data-toggle="validator">
@@ -35,7 +60,7 @@ export const SettingsTab = (  {user} ) => {
 			                          	<Col>
 				                            <div className="form-group has-feedback ">
 				                            	<h5>Фамилия</h5>
-				                                <input type="surname" className="form-control" data-required-error="Поле не заполнено" placeholder={secondName} name="secondName" required/>
+				                                <input type="surname" className="" data-required-error="Поле не заполнено" placeholder={secondName} name="secondName" required/>
 				                            	<h5>Имя</h5>
 				                                <input type="name" className="form-control" id="input-name" data-required-error="Поле не заполнено" placeholder={firstName} name="firstName" required/>
 				                                <h5>Отчество</h5>
