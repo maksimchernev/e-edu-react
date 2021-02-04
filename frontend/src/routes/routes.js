@@ -52,7 +52,9 @@ export const useRoutes = isAuthenticated => {
             
             </Switch>
         )
-    }
+    }else{
+
+    
 
     return(
         <Switch>
@@ -86,8 +88,11 @@ export const useRoutes = isAuthenticated => {
             <Route path ="/courses" exact>
                  <ListCourses/>
             </Route>
+
+        
+
          </Switch>
       )
-
+    }
 
 }

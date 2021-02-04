@@ -45,7 +45,7 @@ export const MainPage = () => {
         <div className="mainpage-grid">
             <Slider />
                 { cardInfo && <CourseCard cardInfo = {cardInfo} />}
-            <Footer/>
+           
             </div>
     );
 }

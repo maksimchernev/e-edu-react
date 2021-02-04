@@ -5,6 +5,7 @@ import  {Nav_}  from './components/nav'
 import  {Usernav} from './components/usernav'
 import {useAuth} from './hooks/auth.hook'
 import {AuthContext} from './context/AuthContext.js'
+import { Footer } from './components/footer'
 
 function App() {
 
@@ -13,7 +14,6 @@ const {token, login, logout, userId} = useAuth()
 const isAuthenticated = !!token
 const routes = useRoutes(isAuthenticated)
 
-
 return (
     <AuthContext.Provider value={{token, login, logout, userId, isAuthenticated}}>
         <Router>
@@ -21,6 +21,7 @@ return (
         {isAuthenticated && <Usernav/>}
           <div>
           {routes}
+          <Footer />
           </div>
         </Router>
     </AuthContext.Provider>
