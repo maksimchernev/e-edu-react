@@ -4,7 +4,7 @@ const router = Router()
 const auth = require('../middleware/auth.middleware')
 
 
-router.put(`/updateUser/:id`,auth, async (req,res)=>{
+router.put(`/updateUser/:id`, auth , async (req,res)=>{
     try {
         
 

@@ -32,7 +32,7 @@ router.post(
             
            const user = await User.findOne({login})
 
-           console.log(user)
+         
             
             if (!user) {
                 return res.status(400).json({ message:'Неправильный логин или пароль' })

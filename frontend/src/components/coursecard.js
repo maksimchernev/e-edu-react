@@ -1,11 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   FlippingCard,
   FlippingCardBack,
   FlippingCardFront,
 } from "react-ui-cards";
-import likeIcon from "../images/coursecard/Like.svg";
 import "../сss/coursecard.css";
 
 export const CourseCard = ({ cardInfo }) => {
