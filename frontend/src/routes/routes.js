@@ -48,7 +48,9 @@ export const useRoutes = isAuthenticated => {
                     <ListCourses/>
                 </Route>
 
-                <Redirect to="/mainPage" />
+                <Route path ="/" exact>
+                <MainPage />
+                </Route>
             
             </Switch>
         )
@@ -89,6 +91,9 @@ export const useRoutes = isAuthenticated => {
                  <ListCourses/>
             </Route>
 
+            <Route path ="/" exact>
+                <MainPage />
+            </Route>
         
 
          </Switch>
