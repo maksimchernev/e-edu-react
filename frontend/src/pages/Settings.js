@@ -34,8 +34,7 @@ useEffect(() => {
 
 
     return (
-        <div>
-            
+        <div className="mainpage-grid pb-5">
           { !loading && user && <SettingsTab user= {user} />}
         </div>
     )

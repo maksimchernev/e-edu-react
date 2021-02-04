@@ -6,12 +6,12 @@ import {Row, Col, Container} from 'react-bootstrap';
 export const About = () => {
 
     return (
-      <Container>
+      <div className="mainpage-grid pb-5">
         <Row>
           <Col sm="12" className="title">
             <h1>About us</h1>
           </Col>
         </Row>
-      </Container>
+      </div>
     )
 }
