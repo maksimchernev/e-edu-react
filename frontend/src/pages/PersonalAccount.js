@@ -3,6 +3,7 @@ import { AuthContext } from '../context/AuthContext'
 import { useHttp } from '../hooks/http.hooks'
 import  {CourseCard}  from '../components/coursecard'
 import  {Footer}  from '../components/footer'
+import {Row, Col, Container} from 'react-bootstrap';
 
 export const PersonalAccount = () => {
 
@@ -36,7 +37,13 @@ useEffect(() => {
 
     return (
         <div>
-            <h1>Мои курсы</h1>
+            <Container>
+                <Row>
+                    <Col sm="12" className="title">
+                        <h1>Мои курсы</h1>
+                    </Col>
+                </Row>
+            </Container>
             <CourseCard />
             <Footer />
         </div>

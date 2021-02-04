@@ -1,9 +1,14 @@
 import React from 'react'
+import {Row, Col, Container} from 'react-bootstrap';
 
 export const MyCourses = () => {
     return (
-          <div>
-            <h1>My courses</h1>
-          </div>
+      <Container>
+          <Row>
+              <Col sm="12" className="title">
+                  <h1>My courses</h1>
+              </Col>
+          </Row>
+      </Container>
     )
 }
