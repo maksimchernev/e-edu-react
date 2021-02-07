@@ -50,7 +50,7 @@
   line-height: 21px;
 }
 
-.form-control::-webkit-input-placeholder {
+#search::-webkit-input-placeholder {
   color: #fdbe67;
 }
 

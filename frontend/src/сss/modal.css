@@ -1,0 +1,48 @@
+#enterButton{
+    background: #FFFFFF;
+    color: #000000;
+
+}
+
+.button-reg{
+    background: #FDBE67;
+    color: #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    Width: 150px;
+    /* margin: 0px 20px 0px 20px;  */
+}
+
+
+#formBasicEmail{
+    background-color: #ffffff;
+    border-bottom: 1px solid #3a3836;
+    border-radius: 0%;
+    }
+
+#formBasicPassword{
+    background-color: #ffffff;
+    border-bottom: 1px solid #3a3836;
+    border-radius: 0%;
+}
+
+#exampleModalLabel {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 13px;
+    font-size: 40px;
+    line-height: 75px;
+}
+
+.modal-90w {
+    width: 45%;
+    max-width: none!important;}
+
+#auth_modal {
+    padding: 3rem;
+}
+
+#sizeBtn{
+   width: 10px;
+}
