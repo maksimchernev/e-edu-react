@@ -7,10 +7,8 @@ import {
   Form,
   Row,
   Col,
-  Dropdown, 
   InputGroup,
-  FormControl,
-  Container, Collapse} from "react-bootstrap";
+  FormControl, Collapse} from "react-bootstrap";
 import { LoginModal } from "./modal";
 import logo from "../images/navbar/Эмблемка.svg";
 import Union from "../images/navbar/Union.png";
@@ -100,9 +98,10 @@ export const Nav_ = () => {
                 </Collapse>
             </Row>
           </Col>
+          
           <Col className="colNavButtons">
             <Button className="navButton" variant="link" onClick={handleModal}>
-              <img src={unknownuser} alt="user" className="imgButton"/>
+              <img src={unknownuser} alt="user" className = "imgButton"/>
               <p>Войти</p>
             </Button>
           </Col>
