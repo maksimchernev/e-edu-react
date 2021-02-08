@@ -1,0 +1,68 @@
+.inp::-webkit-input-placeholder {
+    color:  #000000 50 % !important;
+;
+}
+
+.inp::placeholder {
+    /* modern browser */
+    color:  #2C3552  !important;
+}
+
+#btn{
+    background: #FDBE67;
+    color: #000000;
+    height: 60px;
+    width: 150px;
+    border-radius: 10px;
+}
+.btn-save{
+    text-align: center!important;
+    margin-left: 20%;
+}
+.btn-reg{
+    text-align: center!important;
+}
+
+.inp{
+    background-color: #ffffff !important;
+}
+
+#text{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 0%;
+  width: 313px;
+  background-color: #ffffff;
+}
+
+.modal-90w {
+    width: 25%;
+    max-width: none!important;
+}
+
+#rules{
+    width: 281px;
+    height: 200px;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+#captcha{
+    width: 313px;
+    height: 92px;
+}
+
+.row {
+  display: flex;
+}
+
+.row input-group {
+  margin: auto;
+}
+.row button {
+  margin: auto;
+}
+
+.all-elements{
+    margin-left:15%;
+}

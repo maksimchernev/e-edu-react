@@ -4,6 +4,7 @@ import {Button, Modal, Form, Row, Col} from 'react-bootstrap';
 import { useHttp } from '../hooks/http.hooks';
 //import { useMessage } from '../hooks/message.hooks'
 import { useHistory } from 'react-router-dom'
+import '../сss/reg.css'
 
 
 export const  Reg =() => {
@@ -35,63 +36,84 @@ export const  Reg =() => {
       } catch(e) {
 
       }
-} 
-
+}
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
       return(
         <div>
-          <Modal.Dialog size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered>
-              <Modal.Title><Modal.Header> Регистрация </Modal.Header></Modal.Title>
-              <Modal.Body>
-                 <h4>Ф.И.О.</h4>
+          <Modal.Dialog dialogClassName="modal-90w"
+              aria-labelledby="contained-modal-title-vcenter "
+              centered>
+              <h3 class="modal-title text-center" id="exampleModalLabel"> Регистрация </h3>
+                <Modal.Body  className="all-elements">
                     <form data-toggle="validator">
                         <Row>
-                          <Col>
-                            <div className="form-group has-feedback " style={{float:'left'}}>
-                                <input type="name" class="form-control" id="input-name"
-               data-required-error="Поле не заполнено" placeholder="Имя" name="firstName" onChange = {changeHandler} required/>
+                            <div className="form-group has-feedback "  id="text" className="text" style={{float:'left'}}>
+                                <input type="name"  className="inp form-control" id="input-name"
+                                    data-required-error="Поле не заполнено" placeholder="Имя" name="firstName" onChange = {changeHandler} required/>
                             </div>
-                          </Col>
-                          <Col>
-                            <div className="form-group has-feedback" style={{float:'left'}}>
-                                <input type="surname" className="form-control" data-required-error="Поле не заполнено" placeholder="Фамилия" name="secondName" onChange = {changeHandler} required/>
+                        </Row>
+                        <Row>
+                            <div className="form-group has-feedback" id="text" style={{float:'left'}}>
+                                <input type="surname" className="inp form-control" data-required-error="Поле не заполнено" placeholder="Фамилия" name="secondName" onChange = {changeHandler} required/>
                             </div>
-                          </Col>
-                          <Col>
-                            <div className="form-group has-feedback" style={{float:'left'}}>
-                                <input type="Lastname" className="form-control" data-required-error="Поле не заполнено" placeholder="Отчество(если есть)" name="lastName" onChange = {changeHandler} required/>
+                        </Row>
+                        <Row>
+                            <div className="form-group has-feedback" id="text" style={{float:'left'}}>
+                                <input type="email"   className="inp form-control" id="email"
+                                               pattern="[_0-9a-z][-_.0-9a-z]*@[0-9a-z][-.0-9a-z]*[0-9a-z]\.[a-z]{2,}"
+                                               data-pattern-error="Поле должно соответствовать формату somebody@somewhere.com"
+                                               data-required-error="Поле не заполнено" placeholder="Эл. почта" name="mail" onChange = {changeHandler} required/>
                             </div>
-                          </Col>
+                        </Row>
+                        <Row>
+                            <Button id="btn" className="btn-save" variant="dark" onClick = {handleShow} data-toggle="modal" href="#stack2">Сохранить изменения</Button>
                         </Row>
                     </form>
-                    <h4>E-mail and Pass</h4>
-                    <Row>
-                      <Col>
-                         <input type="email" className="form-control" id="email"
-               pattern="[_0-9a-z][-_.0-9a-z]*@[0-9a-z][-.0-9a-z]*[0-9a-z]\.[a-z]{2,}"
-               data-pattern-error="Поле должно соответствовать формату somebody@somewhere.com"
-               data-required-error="Поле не заполнено" placeholder="Адрес почты" name="mail" onChange = {changeHandler} required/>
 
-                      </Col>
-                      <Col>
-                        <input type="password" className="form-control" id="input-password"
-               data-required-error="Поле не заполнено" placeholder="Password" name="password" onChange = {changeHandler} required/>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col>
-                        <Form.Group controlId="formBasicCheckbox">
-                          <Form.Check type="checkbox" label="Подписаться на рассылку"  />
-                        </Form.Group>
-                      </Col>
-                    </Row>
-              </Modal.Body>
-
-              <Modal.Footer>
-                <Button variant="light" onClick = {registerHandler}>Зарегистрироваться</Button>
-              </Modal.Footer>
+                    <Modal show={show} onHide={handleClose} id="stack2" aria-labelledby="contained-modal-title-vcenter" centered  dialogClassName="modal-90w">
+                        <h3 class="modal-title text-center" id="exampleModalLabel"> Регистрация </h3>
+                        <Modal.Body>
+                            <form data-toggle="validator">
+                              <Row className="justify-content-center">
+                                <Col>
+                                    <Row>
+                                        <div className="form-group has-feedback " id="text" className="text" style={{float:'left'}}>
+                                            <input type="password"  className="inp form-control" id="input-password"
+                                                data-required-error="Поле не заполнено" placeholder="Пароль" name="password" onChange = {changeHandler} required/>
+                                        </div>
+                                    </Row>
+                                    <Row>
+                                        <div className="form-group has-feedback"  id="text" style={{float:'left'}}>
+                                            <input type="password"  className="inp form-control" id="input-password"
+                                                data-required-error="Поле не заполнено" placeholder="Повторите пароль" name="password" onChange = {changeHandler} required/>
+                                        </div>
+                                    </Row>
+                                    <Row>
+                                        <div className="border" id="captcha">Капча</div>
+                                    </Row>
+                                    <Row>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                          <Form.Check type="checkbox" label="Подписаться на рассылку"  />
+                                        </Form.Group>
+                                    </Row>
+                                </Col>
+                                <Col>
+                                    <div className="border" id="rules">Инструкции по паролю</div>
+                                </Col>
+                              </Row>
+                              <Row>
+                                <Button variant="dark" className="btn-reg" id="btn" onClick = {registerHandler}>Регистрация</Button>
+                              </Row>
+                            </form>
+                        </Modal.Body>
+                    </Modal>
+                </Modal.Body>
           </Modal.Dialog>
+
         </div>
       );
+
     }
+

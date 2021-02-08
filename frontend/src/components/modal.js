@@ -13,7 +13,7 @@ export const LoginModal =(props) => {
     const {request} = useHttp()
     const [form,setForm] = useState({
       login:'', password: ''
-  
+
 })
 
 const handleLogin = async() =>{
@@ -30,9 +30,9 @@ const handleLogin = async() =>{
 const changeHandler = event => {
     setForm({...form,[event.target.name]: event.target.value})
 }
-  
 
-  
+
+
       return(
         <div>
           <Modal {...props}
@@ -40,7 +40,7 @@ const changeHandler = event => {
           <h5 class="modal-title text-center" id="exampleModalLabel"> Вход </h5>
             <Modal.Body id = "auth_modal">
               <Form>
-                
+
                 <Form.Group controlId="formBasicEmail">
                   <Form.Control type="email" placeholder="Введите ваш логин" name="login" onChange = {changeHandler}/>
                 </Form.Group>
