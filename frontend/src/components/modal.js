@@ -60,11 +60,11 @@ const changeHandler = event => {
                 </Row>
               <Row className="text-right">
                 <Col className = 'col-sm-8'>
-                  <Button variant="dark" id="enterButton" className="button-reg" onClick={handleLogin}>
+                  <Button variant="outline-dark" id="enterButton" onClick={handleLogin}>
                   Войти
                   </Button>
                 </Col>
-                <Col id = "sizeBtn">
+                <Col  id = "sizeBtn">
                   <Button variant="dark" href="/RegisterPage" className="button-reg" id="regButton" onClick={handleLogin}>
                   Регистрация
                   </Button>

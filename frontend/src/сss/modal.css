@@ -1,8 +1,13 @@
 #enterButton{
-    background: #FFFFFF;
-    color: #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    Width: 150px;
 
 }
+/* #regButton {
+    background: #FDBE67;
+    color: #000000;
+} */
 
 .button-reg{
     background: #FDBE67;
