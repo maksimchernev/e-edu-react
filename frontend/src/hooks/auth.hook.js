@@ -26,8 +26,6 @@ export const useAuth = () => {
             const data = JSON.parse(localStorage.getItem(storageName))
 
         if (data && data.token){
-         
-            const temp = data.token
 
             login(data.token, data.userId)   
 

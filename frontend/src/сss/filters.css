@@ -23,7 +23,7 @@ height: 46px;
 }
 
 .priceInput::-webkit-input-placeholder {
-    color:  #2C3552 50 % !important;
+    color:  #2C3552 50% !important;
 }
 .priceInput:-moz-placeholder {
     /* FF 4-18 */

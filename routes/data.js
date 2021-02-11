@@ -26,15 +26,27 @@ router.get(`/getData/:id`,auth, async (req,res)=>{
     }
 })
 
-router.get('/getCourses', async (req,res)=>{
+router.post('/getCourses', async (req,res)=>{
+
+    let collection = null
+
     try {
-        const collection = await Course.find(req.body)
+
+        if (Object.keys(req.body).length === 0 && req.body.constructor === Object)
+        {
+            collection = await Course.find()
+        }
+        else{
+            collection = await Course.find({_id: req.body})
+        }
+    
 
         res.json(collection)
 
 
     } catch(e){
         res.status(500).json({message: 'Ошибка, попытайтесь снова'}) 
+        console.log(e)
     }
 })
 

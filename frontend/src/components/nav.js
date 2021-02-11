@@ -17,7 +17,6 @@ import book from "../images/navbar/book.png";
 import bookmark from "../images/navbar/bookmark.png";
 import comparison from "../images/navbar/comparison.png";
 import horn from "../images/navbar/horn.png";
-import user from "../images/navbar/user.png";
 import unknownuser from "../images/navbar/unknownuser.png";
 import {Filters} from '../components/filters'
 
