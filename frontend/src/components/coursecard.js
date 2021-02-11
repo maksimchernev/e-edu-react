@@ -7,7 +7,7 @@ import {
 } from "react-ui-cards";
 import "../сss/coursecard.css";
 
-export const CourseCard = ({ cardInfo }) => {
+export const CourseCard = ({ cardInfo }, props) => {
   const addClass = (e) => {
     e.target.classList.toggle("selected");
   };
@@ -16,6 +16,7 @@ export const CourseCard = ({ cardInfo }) => {
     <div className="coursecard-grid d-flex flex-wrap align-content-between justify-content-between">
       {cardInfo.map((card, index) => {
         if (index < 6) {
+        ///if (index < props.number) {
           return (
             <div className="coursecard-unit mb-5" key={card._id}>
               <FlippingCard>

@@ -99,13 +99,13 @@ export const SettingsTab = (  {user} ) => {
 		                	<div className="tab_content">
 			                	<h3 className="h3Settings">Настройка уведомлений</h3>
 			                	<Form>
-								  <Form.Group controlId="formBasicCheckbox">
+								  <Form.Group controlId="startOfSelectedCoursesCheckbox">
 								    <Form.Check type="checkbox" label="Я хочу получать уведомления о начале избранных курсов по email" />
 								  </Form.Group>
-								  <Form.Group controlId="formBasicCheckbox">
+								  <Form.Group controlId="recommendedCoursesCheckbox">
 								    <Form.Check type="checkbox" label="Я хочу получать уведомления о рекомендованных курсах по email" />
 								  </Form.Group>
-								  <Form.Group controlId="formBasicCheckbox">
+								  <Form.Group controlId="newCoursesCheckbox">
 								    <Form.Check type="checkbox" label="Я хочу получать уведомления о новых курсах, акциях и различных мероприятиях по email" />
 								  </Form.Group>
 								</Form>

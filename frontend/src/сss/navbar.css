@@ -149,3 +149,12 @@
 p {
   margin-bottom: 0px;
 }
+
+.dropDownIcon {
+  width: 16px;
+  line-height: 16px;
+  display: block;
+  float: left;
+  padding-top: 4px;
+  margin-right: 4px;
+}

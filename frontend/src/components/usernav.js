@@ -115,9 +115,9 @@ export const Usernav = () => {
               id="dropdown-menu-right"
               style={{ right: "auto", left: "auto" }}
             >
-              <Dropdown.Item href="/myCourses" className="dropDownLink"><img src={my_courses} alt="Courses" className="dropDownIcon"/>Мои курсы</Dropdown.Item>
-              <Dropdown.Item href="/settings" className="dropDownLink"><img src={settings} alt="Courses" className="dropDownIcon"/>Настройки</Dropdown.Item>
-              <Dropdown.Item onClick={logoutHandler} className="dropDownLink"><img src={sign_out} alt="Courses" className="dropDownIcon"/>Выход</Dropdown.Item>
+              <Dropdown.Item href="/myCourses"><img src={my_courses} alt="Courses" className="dropDownIcon"/>Мои курсы</Dropdown.Item>
+              <Dropdown.Item href="/settings"><img src={settings} alt="Courses" className="dropDownIcon"/>Настройки</Dropdown.Item>
+              <Dropdown.Item onClick={logoutHandler}><img src={sign_out} alt="Courses" className="dropDownIcon"/>Выход</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Col>

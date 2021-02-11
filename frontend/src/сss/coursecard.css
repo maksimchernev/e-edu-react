@@ -39,3 +39,23 @@
 .like-btn:focus {
   outline: 0;
 }
+
+.showMoreButton {
+  background-color: #fdbe67;
+  border-radius: 10px;
+  color: #121921;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  align-items: center;
+  text-align: center;
+  border: 0px;
+  padding: 10px 20px 10px 20px;
+  width: 100%;
+}
+
+.showMoreBlock {
+  height: 100px;
+}
