@@ -11,10 +11,10 @@ import { useContext } from "react";
 import { useHttp } from "../hooks/http.hooks";
 
 export const CourseCard = ({ cardInfo, user }) => {
-  
+
   const auth = useContext(AuthContext)
   const {request,loading} = useHttp()
-  
+
   const addClass = (e) => {
 
     console.log(e.target.getAttribute('data-key'))
@@ -47,7 +47,7 @@ const updateFavorites = (card_id) => {
 
 const updateHandler = async() =>{
   try{
-      
+
       await request(`api/user/updateCourses/${auth.userId}`, 'POST', user,{Authorization: `Bearer ${auth.token}`})
   } catch(e) {
 

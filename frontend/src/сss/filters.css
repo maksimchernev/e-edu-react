@@ -5,12 +5,8 @@ padding: 0px 0px 40px 0px;
 
 .courseFilters {
   background-color: #121921 !important;
-  position: fixed;
+  position: relative;
   z-index: 1;
-  min-width:100%;
-  max-width: 100%;
-  left: 0;
-  top: 204px;
 }
 
 
