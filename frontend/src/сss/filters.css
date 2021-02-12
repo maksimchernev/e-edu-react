@@ -1,13 +1,19 @@
-filters-grid{
+.filters-grid{
 padding: 0px 0px 40px 0px;
+
 }
 
 .courseFilters {
   background-color: #121921 !important;
-  position: relative;
+  position: fixed;
   z-index: 1;
   min-width:100%;
+  max-width: 100%;
+  left: 0;
+  top: 204px;
 }
+
+
 
 .rowFilters {
   padding: 20px 10px 20px 10px;

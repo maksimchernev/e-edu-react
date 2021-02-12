@@ -90,7 +90,7 @@ export const Nav_ = () => {
                 <Button onClick={() => setOpen(!open)} className="navButton" variant="link" aria-controls="collapse" aria-expanded={open} >
                     <p className="navLink" >Расширенный поиск</p>
                 </Button>
-                <Collapse in={open} className="filters">
+                <Collapse in={open}>
                     <div id="collapse" fluid={true}>
                          <Filters />
                     </div>

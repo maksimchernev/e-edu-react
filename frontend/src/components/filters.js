@@ -6,7 +6,7 @@ import '../сss/filters.css'
 export const  Filters =() => {
       return(
          <div className="filters-grid">
-              <div className="courseFilters" fluid>
+              <div className="courseFilters" fluid id="courseFilters">
                 <Container>
                       <Row>
                         <Col xs={2} className="colFilters">
