@@ -8,7 +8,7 @@ import {
   Row,
   Col,
   InputGroup,
-  FormControl, Collapse} from "react-bootstrap";
+  FormControl, Collapse, Jumbotron, Container} from "react-bootstrap";
 import { LoginModal } from "./modal";
 import logo from "../images/navbar/Эмблемка.svg";
 import Union from "../images/navbar/Union.png";
@@ -77,51 +77,52 @@ export const Nav_ = () => {
           </Col>
 
           <Col sm="6" className="colNavButtons">
-          <Form.Row inline className="justify-content-center">
-              <InputGroup className="mb-3" className="search">
-                <FormControl id = "search" type="search" placeholder="Search" />
-                <InputGroup.Append className="appendButton">
-                  <button variant = "outline-success" className="navButton"><img src={Union} alt="Search"/></button>
-                </InputGroup.Append>
-              </InputGroup>
-            </Form.Row>
+              <Form.Row inline className="justify-content-center">
+                  <InputGroup className="mb-3" className="search">
+                    <FormControl id = "search" type="search" placeholder="Search" />
+                    <InputGroup.Append className="appendButton">
+                      <button variant = "outline-success" className="navButton"><img src={Union} alt="Search"/></button>
+                    </InputGroup.Append>
+                  </InputGroup>
+              </Form.Row>
 
-            <Row className="justify-content-center">
-                <Button onClick={() => setOpen(!open)} className="navButton" variant="link" aria-controls="collapse" aria-expanded={open} >
-                    <p className="navLink" >Расширенный поиск</p>
-                </Button>
-                <Collapse in={open}>
-                    <div id="collapse" fluid={true}>
-                         <Filters />
-                    </div>
-                </Collapse>
-            </Row>
+               <Row className="filters">
+                    <Button onClick={() => setOpen(!open)} className="navButton" variant="link" aria-controls="collapse" aria-expanded={open} >
+                        <p className="navLink" >Расширенный поиск</p>
+                    </Button>
+                    <Collapse in={open}>
+                        <div id="collapse" fluid={true}>
+                             <Filters />
+                        </div>
+                    </Collapse>
+               </Row>
           </Col>
-          
+
           <Col className="colNavButtons">
             <Button className="navButton" variant="link" onClick={handleModal}>
               <img src={unknownuser} alt="user" className = "imgButton"/>
               <p>Войти</p>
             </Button>
           </Col>
-          <Col className="colNavButtons"> 
+          <Col className="colNavButtons">
             <Button className="navButton" variant="link">
               <img src={bookmark} alt="bookmark" className="imgButton"/>
               <p>Избранное</p>
             </Button>
           </Col>
-          <Col className="colNavButtons"> 
+          <Col className="colNavButtons">
             <Button className="navButton" variant="link">
               <img src={comparison} alt="comparison" className="imgButton"/>
               <p>Сравнение</p>
             </Button>
           </Col>
-          <Col className="colNavButtons"> 
+          <Col className="colNavButtons">
             <Button className="navButton" variant="link">
               <img src={horn} alt="horn" className="imgButton"/>
               <p>Акции</p>
             </Button>
           </Col>
+
 
 
         {/*  <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -141,6 +142,7 @@ export const Nav_ = () => {
         {/* </Container> */}
       </Navbar>
       <LoginModal show={flag} onHide={handleModal} />
+
     </React.Fragment>
   );
 };
