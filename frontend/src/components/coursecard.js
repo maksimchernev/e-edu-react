@@ -60,11 +60,12 @@ const updateHandler = async() =>{
             <div className="coursecard-unit mb-5" key={card._id}>
               <Flippy flipOnHover={true} style={{ width: '411px', height: '482.15px' }} >
                 <FrontSide>
-                  <h3>Course Name:</h3>
-                              <h6>{card.title}</h6>
+                  <h3 id='cardPrice'>{card.price}</h3>
+                  <h6 id='frontTitle'>{card.title}</h6>
+                  <h6 id = 'cardDesc'>{card.duration}</h6>
                 </FrontSide>
                 <BackSide>
-                  <h3>Course title:</h3>
+                  <h3 id = 'backTitle'>Что дает данный курс:</h3>
                   <h6>{card.title}</h6>
                   <h4>Course duration:</h4>
                   <h6>{card.duration}</h6>
