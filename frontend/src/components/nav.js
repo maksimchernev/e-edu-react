@@ -86,15 +86,10 @@ export const Nav_ = () => {
                   </InputGroup>
               </Form.Row>
 
-               <Row className="filters">
+               <Row>
                     <Button onClick={() => setOpen(!open)} className="navButton" variant="link" aria-controls="collapse" aria-expanded={open} >
                         <p className="navLink" >Расширенный поиск</p>
                     </Button>
-                    <Collapse in={open}>
-                        <div id="collapse" fluid={true}>
-                             <Filters />
-                        </div>
-                    </Collapse>
                </Row>
           </Col>
 
@@ -142,7 +137,11 @@ export const Nav_ = () => {
         {/* </Container> */}
       </Navbar>
       <LoginModal show={flag} onHide={handleModal} />
-
+        <Collapse in={open}>
+            <div id="collapse" fluid={true}>
+                <Filters />
+            </div>
+        </Collapse>
     </React.Fragment>
   );
 };

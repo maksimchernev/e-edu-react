@@ -92,11 +92,6 @@ export const Usernav = () => {
                 <Button onClick={() => setOpen(!open)} className="navButton" variant="link" aria-controls="collapse" aria-expanded={open} >
                     <p className="navLink" >Расширенный поиск</p>
                 </Button>
-                <Collapse in={open} className="filters">
-                    <div id="collapse" fluid={true}>
-                         <Filters />
-                    </div>
-                </Collapse>
             </Row>
         </Col>
 
@@ -181,6 +176,11 @@ export const Usernav = () => {
             </Navbar.Collapse>
 
           </Navbar> */}
+          <Collapse in={open} className="filters">
+                    <div id="collapse" fluid={true}>
+                         <Filters />
+                    </div>
+          </Collapse>
     </React.Fragment>
   );
 };
