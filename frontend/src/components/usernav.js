@@ -134,7 +134,7 @@ export const Usernav = () => {
           </Button>
         </Col>
         <Col className="colNavButtons">
-          <Button className="navButton" variant="link">
+          <Button className="navButton" variant="link" href="/specialOffers">
             <img src={horn} alt="horn" className="imgButton" />
             <p>Акции</p>
           </Button>
