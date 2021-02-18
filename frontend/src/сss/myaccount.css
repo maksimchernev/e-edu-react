@@ -72,7 +72,7 @@
   }
   
   .inputSettings::-webkit-input-placeholder {
-      color:  #000000 50 % !important;
+      color:  #000000 50% !important;
   }
   .inputSettings:-moz-placeholder {
       /* FF 4-18 */

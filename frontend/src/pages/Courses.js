@@ -3,6 +3,7 @@ import  {CourseCard}  from '../components/coursecard'
 import { AuthContext } from '../context/AuthContext'
 import { useHttp } from '../hooks/http.hooks'
 import {Button, Row, Col} from 'react-bootstrap'
+import "../сss/mainpage.css"
 
 export const ListCourses = () => {
 const [cardInfo, setCardInfo] = useState(null)
@@ -52,17 +53,13 @@ const [cardInfo, setCardInfo] = useState(null)
        }, [getCourses,rendered])
 
     return (
-          <div>
-            <div className="filters-grid">
-
+            <div className="mainpage-grid">
               { cardInfo && <CourseCard cardInfo = {cardInfo} user = {user} count = {count}/>}
-            </div>
             <Row className="showMoreBlock">
               <Col sm={{ span: 2, offset: 5 }} className="my-auto">
                 <Button onClick={() => setCount(count + 6)} className="showMoreButton">Показать больше</Button>
               </Col>
             </Row>
-            
-          </div>
+             </div>
     )
 }
