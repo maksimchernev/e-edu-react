@@ -1,6 +1,6 @@
 .filters-grid{
 padding: 0px 0px 40px 0px;
-background-color: #121921 !important;
+background-color: #ffffff !important;    /*изменил, чтобы на странице courses у карточек был стандартный background, как у всей странички (а не чёрный как у header'а)*/
 }
 
 

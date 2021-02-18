@@ -103,8 +103,8 @@ export const Usernav = () => {
               id="dropdown-basic"
               block
             >
-              <img className="person1-head imgButton" src={person1} />
-              <p>Имя</p>
+              <img className="person1-head imgButton" src={person1} /*TODO: [ER-15] Отображение имени пользователя*//>
+              <p>Имя </p>
             </Dropdown.Toggle>
             <Dropdown.Menu
               id="dropdown-menu-right"

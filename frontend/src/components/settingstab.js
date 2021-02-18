@@ -7,10 +7,10 @@ import person from "../images/settingsTab/Person.png";
 export const SettingsTab = (  {user} ) => {
 
 
-	const firstName = user[Object.keys(user)[1]]
-    const secondName = user[Object.keys(user)[2]]
-    const lastName = user[Object.keys(user)[3]]
-    const mail = user[Object.keys(user)[4]]
+	const firstName = user[Object.keys(user)[2]]		//BUG: [ER-11] Некорректные номера полей
+    const secondName = user[Object.keys(user)[3]]
+    const lastName = user[Object.keys(user)[4]]
+    const mail = user[Object.keys(user)[5]]
 
     return (
     <div className="container">
@@ -49,7 +49,7 @@ export const SettingsTab = (  {user} ) => {
 									               data-pattern-error="Поле должно соответствовать формату somebody@somewhere.com"
 									               data-required-error="Поле не заполнено" placeholder={mail} name="mail" required/>
 				                            </div>
-											<Button variant="primary" type="submit" className="settingsButton">
+											<Button variant="primary" type="submit" className="settingsButton" /*//ISSUE: [ER-10]Кнопка не сохраняет настройки*/>
 												Сохранить изменения
 											</Button>
 			                          	</Col>
@@ -64,12 +64,12 @@ export const SettingsTab = (  {user} ) => {
 											</Row>
 											<Row>
 												<Col sm="5">
-													<Button variant="primary" type="submit" className="settingsPhotoButton">
+													<Button variant="primary" type="submit" className="settingsPhotoButton" /*//TODO: [ER-13] Добавить функционал кнопкам*/>
 														Обновить
 													</Button>
 												</Col>
 												<Col sm="4">
-													<Button variant="primary" type="submit" className="settingsPhotoButton">
+													<Button variant="primary" type="submit" className="settingsPhotoButton" /*//TODO: [ER-13] Добавить функционал кнопкам*/>
 														Удалить
 													</Button>
 												</Col>
@@ -87,7 +87,7 @@ export const SettingsTab = (  {user} ) => {
 												 <input type="password" className="form-control inputSettings" id="input-password" data-required-error="Поле не заполнено" placeholder="Новый пароль" name="password" />
 												 <input type="password" className="form-control inputSettings" id="input-password" data-required-error="Поле не заполнено" placeholder="Повторите новый пароль" name="password" />
 											</div>
-											<Button variant="primary" type="submit" className="settingsButton">
+											<Button variant="primary" type="submit" className="settingsButton" /*//ISSUE: [ER-10]Кнопка не сохраняет настройки*/>
 												Сохранить изменения
 											</Button>
 				                        </Col>
@@ -110,7 +110,7 @@ export const SettingsTab = (  {user} ) => {
 								  </Form.Group>
 								</Form>
 								<Col sm={{ span: 5, offset: 7 }}>
-									<Button variant="primary" type="submit" className="settingsRightButton">
+									<Button variant="primary" type="submit" className="settingsRightButton" /*//BUG: [ER-14] При нажатии кнопки ничего не происходит (кнопка остаётся нажатой)*/>
 										Сохранить изменения
 									</Button>
 								</Col>
