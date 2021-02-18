@@ -1,6 +1,4 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react'
-import  {Footer}  from '../components/footer'
-import  {Filters}  from '../components/filters'
 import  {CourseCard}  from '../components/coursecard'
 import { AuthContext } from '../context/AuthContext'
 import { useHttp } from '../hooks/http.hooks'

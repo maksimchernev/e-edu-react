@@ -11,7 +11,7 @@ import yout from '../images/footer/YouTube - Negative.png'
 export const Footer =() => {
 	return(
     <footer className="footer-grid ">
-      <Navbar expand="lg">
+      <Navbar expand="lg w-100">
             <Row>
                 <Col xs={2} className="colLinkls">
                     <a href="#"><img className="soc-net" src={fb} /></a>

@@ -6,8 +6,8 @@ import { AuthContext } from "../context/AuthContext";
 import { useContext } from "react";
 import { useHttp } from "../hooks/http.hooks";
 
-export const CourseCard = ({ cardInfo, user }) => {
-
+export const CourseCard = ({ cardInfo, user, count }) => {
+  
   const auth = useContext(AuthContext)
   const {request,loading} = useHttp()
 
@@ -54,7 +54,7 @@ const updateHandler = async() =>{
     <div className="coursecard-grid d-flex flex-wrap align-content-between justify-content-between">
       {cardInfo.map((card, index) => {
 
-        if (index < 6) {
+        if (index < count) {
         ///if (index < props.number) {
           return (
             <div className="coursecard-unit mb-5" key={card._id}>

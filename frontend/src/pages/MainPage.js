@@ -4,6 +4,7 @@ import  {CourseCard}  from '../components/coursecard'
 import { AuthContext } from '../context/AuthContext'
 import { useHttp } from '../hooks/http.hooks'
 import "../сss/mainpage.css"
+import { Button, Col, Row } from 'react-bootstrap'
 
 export const MainPage = () => { 
 
@@ -13,7 +14,7 @@ export const MainPage = () => {
   const [rendered, setRendered] = useState(false);
   const auth = useContext(AuthContext)
   const [user,setUser] = useState(null)
-
+  const [count, setCount] = useState(6);
 
   const getUser = useCallback( async () => {
     try{
@@ -59,7 +60,12 @@ export const MainPage = () => {
     return (
         <div className="mainpage-grid">
             <Slider />
-                {cardInfo && <CourseCard cardInfo = {cardInfo} user = {user}/>}
+                {cardInfo && <CourseCard cardInfo = {cardInfo} user = {user} count = {count}/>}
+                <Row className="showMoreBlock">
+              <Col sm={{ span: 2, offset: 5 }} className="my-auto">
+                <Button onClick={() => setCount(count + 6)} className="showMoreButton" >Показать больше</Button>
+              </Col>
+            </Row>
             </div>
     );
 }

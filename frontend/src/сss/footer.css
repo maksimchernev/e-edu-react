@@ -1,17 +1,21 @@
-.footer-grid{
-position: relative;
-min-width: 100%;
-height: 100px;
-left: 0px;
-top: 0px;
+.footer-grid {
+  /* position: relative; */
+  min-width: 100%;
+  height: 100px;
+  /* left: 0px; */
+  /* top: 0px; */
+  position: fixed;
+  bottom: 0;
 
-background: #121921
+  background: #121921;
+  display: flex;
+  align-items: center;
 }
 
-.footerLink{
-    color: #FFFFFF !important;
+.footerLink {
+  color: #ffffff !important;
 }
 
 .colLinkls {
-    padding: 0px 20px 0px 20px; 
+  padding: 0px 20px 0px 20px;
 }

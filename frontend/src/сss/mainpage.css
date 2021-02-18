@@ -6,9 +6,10 @@
   /* position: absolute; */
   /* min-width: 100%; */
   min-height: 100vh;
-   max-height: 2476px; 
+   /* max-height: 2476px;  */
   /* left: 0px; */
   /* top: 96px; */
   background: #e9edee;
+  margin-bottom: 100px;
 }
 

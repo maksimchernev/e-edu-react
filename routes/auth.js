@@ -55,7 +55,6 @@ router.post(
             res.json({token, userId: user.id,})
 
         }catch(e){
-        console.log(e)
         res.status(500).json({message: 'Ошибка, попробуйте снова'})    
         }
 })
