@@ -55,7 +55,6 @@ const updateHandler = async() =>{
       {cardInfo.map((card, index) => {
 
         if (index < count) {
-        ///if (index < props.number) {
           return (
             <div className="coursecard-unit mb-5" key={card._id}>
               <Flippy flipOnHover={true} style={{ width: '411px', height: '482.15px' }} >
@@ -71,9 +70,9 @@ const updateHandler = async() =>{
                   <h6>{card.duration}</h6>
                   <h3>Course price:</h3> <h6>{card.price}</h6>
 
-                   <div class="btn-group btn-group-justified" id="btns" role="group" aria-label="Justified button group">
+                   <div className="btn-group btn-group-justified" id="btns" role="group" aria-label="Justified button group">
                        <button  className={(user && user.favorites.indexOf(card._id) !== -1 ? "like-btn selected" : "like-btn")} data-key={card._id} onClick={addClass}></button>
-                        <button  className="learn-more-btn float-right">Узнать больше</button>
+                        <button  className="learn-more-btn float-right" onClick={()=> window.open(card.url, "_blank")}>Узнать больше</button>
                    </div>
 
                 </BackSide>

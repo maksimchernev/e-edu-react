@@ -10,4 +10,4 @@ const schema = new Schema({
    
 })
 
-module.exports = model('Courses1', schema)
+module.exports = model('Courses3', schema)

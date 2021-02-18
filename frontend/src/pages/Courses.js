@@ -55,7 +55,7 @@ const [cardInfo, setCardInfo] = useState(null)
           <div>
             <div className="filters-grid">
 
-              { cardInfo && <CourseCard cardInfo = {cardInfo} user = {user}/>}
+              { cardInfo && <CourseCard cardInfo = {cardInfo} user = {user} count = {count}/>}
             </div>
             <Row className="showMoreBlock">
               <Col sm={{ span: 2, offset: 5 }} className="my-auto">

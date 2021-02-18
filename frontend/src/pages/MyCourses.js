@@ -1,6 +1,5 @@
-import { set } from 'mongoose';
 import React, { useCallback, useContext, useEffect, useState } from 'react'
-import {Row, Col} from 'react-bootstrap';
+import {Button, Row, Col} from 'react-bootstrap';
 import { CourseCard } from '../components/coursecard';
 import { AuthContext } from '../context/AuthContext';
 import { useHttp } from '../hooks/http.hooks';
@@ -12,6 +11,7 @@ export const MyCourses = () => {
     const [rendered, setRendered] = useState(false);
     const auth = useContext(AuthContext)
     const [user,setUser] = useState('')
+    const [count, setCount] = useState(6);
 
     const getCourses = useCallback( async (user) => {
         try{
@@ -58,8 +58,12 @@ export const MyCourses = () => {
           <Row>
               <Col sm="12" className="title">
                   <h1>Мои курсы</h1>
-
-                  {cardInfo && <CourseCard cardInfo = {cardInfo} user = {user}/>}
+                  {cardInfo && <CourseCard cardInfo = {cardInfo} user = {user} count = {count} />}
+                  <Row className="showMoreBlock">
+              <Col sm={{ span: 2, offset: 5 }} className="my-auto">
+                <Button onClick={() => setCount(count + 6)} className="showMoreButton" >Показать больше</Button>
+              </Col>
+            </Row>
               </Col>
           </Row>
       </div>
