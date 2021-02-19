@@ -57,13 +57,13 @@ const updateHandler = async() =>{
         if (index < count) {
           return (
             <div className="coursecard-unit mb-5" key={card._id}>
-              <Flippy flipOnHover={true} style={{ width: '411px', height: '482.15px' }} >
-                <FrontSide>
+              <Flippy flipOnHover={true} style={{ width: '411px', height: '482.15px'}} >
+                <FrontSide style={{background: '#ffffff'}}>
                   <h3 id='cardPrice'>{card.price}</h3>
                   <h6 id='frontTitle'>{card.title}</h6>
                   <h6 id = 'cardDesc'>{card.duration}</h6>
                 </FrontSide>
-                <BackSide>
+                <BackSide style={{background: '#ffffff'}}>
                   <h3 id = 'backTitle'>Что дает данный курс:</h3>
                   <h6>{card.title}</h6>
                   <h4>Course duration:</h4>

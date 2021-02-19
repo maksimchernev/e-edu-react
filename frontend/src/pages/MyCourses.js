@@ -6,7 +6,7 @@ import { useHttp } from '../hooks/http.hooks';
 
 export const MyCourses = () => {
 
-    const [cardInfo, setCardInfo] = useState(null) 
+    const [cardInfo, setCardInfo] = useState(null)
     const {request,loading} = useHttp()
     const [rendered, setRendered] = useState(false);
     const auth = useContext(AuthContext)
@@ -15,42 +15,42 @@ export const MyCourses = () => {
 
     const getCourses = useCallback( async (user) => {
         try{
-    
+
           const data = await request(`/api/data/getCourses`,'POST', user.favorites)
 
           setCardInfo(data)
-    
-    
+
+
         }catch(e){
         }
-      
+
     }, [request])
 
     const getFavorites = useCallback( async () => {
         try{
-          const data = await request(`/api/data/getData/${auth.userId}`,'GET',null,{ 
+          const data = await request(`/api/data/getData/${auth.userId}`,'GET',null,{
                 Authorization: `Bearer ${auth.token}`
             })
             setUser(data)
             getCourses(data)
-    
+
         }catch(e){
         }
-      
+
     }, [auth.token,auth.userId,request,getCourses,setUser])
 
     useEffect( () => {
-       
+
         if(rendered){
             getFavorites()
-            
+
         }
-        
+
         if( !rendered ) {
             setRendered(true);
         }
-       
-       }, [getFavorites,rendered])  
+
+       }, [getFavorites,rendered])
 
 
     return (

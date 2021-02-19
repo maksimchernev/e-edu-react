@@ -78,15 +78,13 @@ export const Usernav = () => {
 
         <Col sm="6" className="colNavButtons">
           <Form.Row inline className="justify-content-center">
-            <InputGroup className="mb-3" className="search">
-              <FormControl type="search" placeholder="Search" />
-              <InputGroup.Append className="appendButton ml-0">
-                <button variant="outline-success" className="navButton">
-                  <img src={Union} alt="Search" />
-                </button>
-              </InputGroup.Append>
-            </InputGroup>
-          </Form.Row>
+                  <InputGroup className="mb-3" className="search">
+                    <FormControl id = "search" type="search" placeholder="Search" />
+                    <InputGroup.Append className="appendButton">
+                      <button variant = "outline-success" className="navButton"><img src={Union} alt="Search"/></button>
+                    </InputGroup.Append>
+                  </InputGroup>
+              </Form.Row>
 
           <Row className="justify-content-center">
                 <Button onClick={() => setOpen(!open)} className="navButton" variant="link" aria-controls="collapse" aria-expanded={open} >
