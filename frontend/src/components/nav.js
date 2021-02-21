@@ -79,7 +79,7 @@ export const Nav_ = () => {
           <Col sm="6" className="colNavButtons">
               <Form.Row inline className="justify-content-center">
                   <InputGroup className="mb-3" className="search">
-                    <FormControl id = "search" type="search" placeholder="Search" />
+                    <FormControl id = "search" type="search" placeholder="Поиск по курсам" />
                     <InputGroup.Append className="appendButton">
                       <button variant = "outline-success" className="navButton"><img src={Union} alt="Search"/></button>
                     </InputGroup.Append>

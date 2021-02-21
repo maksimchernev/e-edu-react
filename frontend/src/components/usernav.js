@@ -79,7 +79,7 @@ export const Usernav = () => {
         <Col sm="6" className="colNavButtons">
           <Form.Row inline className="justify-content-center">
                   <InputGroup className="mb-3" className="search">
-                    <FormControl id = "search" type="search" placeholder="Search" />
+                    <FormControl id = "search" type="search" placeholder="Поиск по курсам" />
                     <InputGroup.Append className="appendButton">
                       <button variant = "outline-success" className="navButton"><img src={Union} alt="Search"/></button>
                     </InputGroup.Append>
@@ -108,7 +108,7 @@ export const Usernav = () => {
               id="dropdown-menu-right"
               style={{ right: "auto", left: "auto" }}
             >
-              <Dropdown.Item href="/myCourses"><img src={my_courses} alt="Courses" className="dropDownIcon"/>Мои курсы</Dropdown.Item>
+              <Dropdown.Item href="/myCourses"><img src={my_courses} alt="Courses" className="dropDownIcon"/>Избранное</Dropdown.Item>
               <Dropdown.Item href="/settings"><img src={settings} alt="Courses" className="dropDownIcon"/>Настройки</Dropdown.Item>
               <Dropdown.Item onClick={logoutHandler}><img src={sign_out} alt="Courses" className="dropDownIcon"/>Выход</Dropdown.Item>
             </Dropdown.Menu>

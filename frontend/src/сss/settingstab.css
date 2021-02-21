@@ -1,0 +1,111 @@
+h1{
+border-bottom: 2px solid #121921;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 60px;
+line-height: 112px;
+color: #121921;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.h3Settings{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 56px;
+display: flex;
+align-items: center;
+letter-spacing: -0.015em;
+color: #000000;
+}
+.inputSettings {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #E9EDEE !important;
+    color: black !important;
+    border-bottom: 1px solid #000000 !important;
+    border-radius: 0px !important;
+  }
+
+.inputSettings::-webkit-input-placeholder {
+      color:  #000000 50% !important;
+}
+.inputSettings:-moz-placeholder {
+      /* FF 4-18 */
+      color:  #000000  !important;
+      opacity: 1;
+}
+.inputSettings::-moz-placeholder {
+      /* FF 19+ */
+      color:  #000000  !important;
+      opacity: 1;
+}
+.inputSettings:-ms-input-placeholder {
+      /* IE 10+ */
+      color:  #000000  !important;
+}
+.inputSettings::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color:  #000000  !important;
+}
+.inputSettings::placeholder {
+      /* modern browser */
+      color:  #000000  !important;
+}
+
+.formSettings {
+    margin-bottom: 20px;
+}
+
+.settingsButton{
+    width: 30%;
+    border-radius: 10px;
+    background: #FDBE67;
+    color:black;
+}
+
+
+input[type=checkbox], input[type=radio]{
+    width: 26px;
+    height: 20px;
+    border: 5px solid #000000;
+}
+
+label{
+    margin-left: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+
+    color: #121921;
+}
+
+.settingsPhotoButton{
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 5px;
+    width:28%;
+    margin-right: 50px;
+    background: white;
+    color:black;
+}
+
+#photo{
+    width:80%;
+}
+
+#ph-btn-1{
+    margin-left:15px;
+}
+
+#ph-btn-2{
+    margin-left:60px;
+}
